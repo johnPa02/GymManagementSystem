@@ -279,3 +279,9 @@ C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Web\bin\Debug\net6.0\System.CodeD
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Web\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Web\bin\Debug\net6.0\System.Text.Json.dll
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Web\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Web\bin\Debug\net6.0\Gym.Services.dll
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Web\bin\Debug\net6.0\Gym.ViewModels.dll
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Web\bin\Debug\net6.0\Gym.Services.pdb
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Web\bin\Debug\net6.0\Gym.ViewModels.pdb
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Web\bin\Debug\net6.0\cloudscribe.Pagination.Models.dll
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Web\bin\Debug\net6.0\cloudscribe.Web.Pagination.dll

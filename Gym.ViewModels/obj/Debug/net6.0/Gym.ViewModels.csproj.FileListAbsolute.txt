@@ -12,3 +12,6 @@ C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.ViewModels\obj\Debug\net6.0\Gym.V
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.ViewModels\obj\Debug\net6.0\ref\Gym.ViewModels.dll
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.ViewModels\bin\Debug\net6.0\Gym.ViewModels.runtimeconfig.json
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.ViewModels\obj\Debug\net6.0\Gym.ViewModels.genruntimeconfig.cache
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.ViewModels\bin\Debug\net6.0\Gym.Models.dll
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.ViewModels\bin\Debug\net6.0\Gym.Models.pdb
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.ViewModels\obj\Debug\net6.0\Gym.ViewModels.csproj.CopyComplete

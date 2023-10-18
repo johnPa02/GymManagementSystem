@@ -12,3 +12,12 @@ C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Services\obj\Debug\net6.0\Gym.Ser
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Services\obj\Debug\net6.0\ref\Gym.Services.dll
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Services\bin\Debug\net6.0\Gym.Services.runtimeconfig.json
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Services\obj\Debug\net6.0\Gym.Services.genruntimeconfig.cache
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Services\bin\Debug\net6.0\Gym.Models.dll
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Services\bin\Debug\net6.0\Gym.Repositories.dll
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Services\bin\Debug\net6.0\Gym.Utillities.dll
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Services\bin\Debug\net6.0\Gym.ViewModels.dll
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Services\bin\Debug\net6.0\Gym.Utillities.pdb
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Services\bin\Debug\net6.0\Gym.ViewModels.pdb
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Services\bin\Debug\net6.0\Gym.Models.pdb
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Services\bin\Debug\net6.0\Gym.Repositories.pdb
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Services\obj\Debug\net6.0\Gym.Services.csproj.CopyComplete
