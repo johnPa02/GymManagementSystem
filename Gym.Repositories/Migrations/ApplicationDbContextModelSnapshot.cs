@@ -424,6 +424,10 @@ namespace Gym.Repositories.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
+                    b.Property<string>("Specialization")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasDiscriminator().HasValue("ApplicationUser");
                 });
 

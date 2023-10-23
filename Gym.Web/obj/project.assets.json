@@ -4134,6 +4134,7 @@
         "dependencies": {
           "Gym.Models": "1.0.0",
           "Gym.Repositories": "1.0.0",
+          "Microsoft.AspNetCore.Identity.UI": "6.0.23",
           "cloudscribe.Web.Pagination": "6.0.0"
         },
         "compile": {

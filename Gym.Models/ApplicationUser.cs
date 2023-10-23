@@ -14,7 +14,9 @@ namespace Gym.Models
 		public DateTime DateOfBirth { get; set; }
 		public string PhoneNumber { get; set; }
 		public bool IsActive { get; set; }
-		public ICollection<TrainingSchedule> TrainingSchedules { get; set; }
+		public string Specialization { get; set; }
+
+        public ICollection<TrainingSchedule> TrainingSchedules { get; set; }
 		[NotMapped]
 		public ICollection<CustomerTrainer> CustomerTrainers { get; set; }
 		public ICollection<Invoice> Invoices { get; set; }
