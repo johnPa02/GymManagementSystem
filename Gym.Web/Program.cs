@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Identity;
 using Gym.Utillities;
 using Gym.Repositories.Interfaces;
 using Gym.Repositories.Implementation;
+using Gym.Services;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +20,9 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
 
 builder.Services.AddScoped<IDbInitializer, DbInitializer>();
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IEmailSender, EmailSender>();
+builder.Services.AddTransient<IPackageService, PackageService>();
+builder.Services.AddTransient<IApplicationUserService, ApplicationUserService>();
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
@@ -40,7 +45,7 @@ app.UseAuthorization();
 app.MapRazorPages();
 app.MapControllerRoute(
 	name: "default",
-	pattern: "{Area=Customer}/{controller=Home}/{action=Index}/{id?}");
+	pattern: "{Area=Admin}/{controller=Packages}/{action=Index}/{id?}");
 
 app.Run();
 

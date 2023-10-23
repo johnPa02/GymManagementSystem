@@ -1,4 +1,5 @@
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Utillities\bin\Debug\net6.0\Gym.Utillities.deps.json
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Utillities\bin\Debug\net6.0\Gym.Utillities.runtimeconfig.json
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Utillities\bin\Debug\net6.0\Gym.Utillities.dll
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Utillities\bin\Debug\net6.0\Gym.Utillities.pdb
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Utillities\bin\Debug\net6.0\Gym.Models.dll
@@ -14,6 +15,5 @@ C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Utillities\obj\Debug\net6.0\Gym.U
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Utillities\obj\Debug\net6.0\Gym.Utillities.dll
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Utillities\obj\Debug\net6.0\refint\Gym.Utillities.dll
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Utillities\obj\Debug\net6.0\Gym.Utillities.pdb
-C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Utillities\obj\Debug\net6.0\ref\Gym.Utillities.dll
-C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Utillities\bin\Debug\net6.0\Gym.Utillities.runtimeconfig.json
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Utillities\obj\Debug\net6.0\Gym.Utillities.genruntimeconfig.cache
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Utillities\obj\Debug\net6.0\ref\Gym.Utillities.dll

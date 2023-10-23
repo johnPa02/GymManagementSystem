@@ -1,4 +1,5 @@
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Models\bin\Debug\net6.0\Gym.Models.deps.json
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Models\bin\Debug\net6.0\Gym.Models.runtimeconfig.json
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Models\bin\Debug\net6.0\Gym.Models.dll
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Models\bin\Debug\net6.0\Gym.Models.pdb
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Models\obj\Debug\net6.0\Gym.Models.csproj.AssemblyReference.cache
@@ -9,6 +10,5 @@ C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Models\obj\Debug\net6.0\Gym.Model
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Models\obj\Debug\net6.0\Gym.Models.dll
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Models\obj\Debug\net6.0\refint\Gym.Models.dll
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Models\obj\Debug\net6.0\Gym.Models.pdb
-C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Models\obj\Debug\net6.0\ref\Gym.Models.dll
-C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Models\bin\Debug\net6.0\Gym.Models.runtimeconfig.json
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Models\obj\Debug\net6.0\Gym.Models.genruntimeconfig.cache
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Models\obj\Debug\net6.0\ref\Gym.Models.dll
