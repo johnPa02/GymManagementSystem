@@ -285,3 +285,11 @@ C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Web\obj\Debug\net6.0\refint\Gym.W
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Web\obj\Debug\net6.0\Gym.Web.pdb
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Web\obj\Debug\net6.0\Gym.Web.genruntimeconfig.cache
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Web\obj\Debug\net6.0\ref\Gym.Web.dll
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Web\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Web\bin\Debug\net6.0\MailKit.dll
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Web\bin\Debug\net6.0\MimeKit.dll
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Web\bin\Debug\net6.0\System.Formats.Asn1.dll
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Web\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Web\bin\Debug\net6.0\System.Text.Encoding.CodePages.dll
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Web\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Web\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll
