@@ -1,0 +1,82 @@
+﻿/* các css mới tử backender thêm */
+#slider {
+    width: 100%;
+    height: 100vh;
+    background-color: #A50000;
+    background-image: url(/img/bg-main.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.slider-admin {
+    background-image: url('/img/CALI.jpg');
+}
+
+#slider .container {
+    padding-top: 260px;
+}
+
+#slider h1 {
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
+}
+
+#slider h2 {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 50px;
+    font-size: 24px;
+}
+
+#slider .btn-start {
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px 11px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 10px 0 0 0;
+    color: #A50000;
+    background-color: #FFFFFF;
+    border: 2px solid #A50000;
+}
+
+
+.brands {
+    position: relative;
+    padding: 12px 0;
+    text-align: center;
+    background-color: #c1ddc7;
+    /* border-top: 1px solid #fff; */
+}
+
+    .brands img {
+        max-width: 45%;
+        display: inline-block;
+        margin: 15px 0;
+        filter: grayscale(100);
+    }
+
+        .brands img:hover {
+            filter: none;
+            transition: all 200ms ease-in;
+            transform: scale(1.1);
+        }
+
+.enter-text .form-control {
+    padding-left: 2.375rem;
+}
+
+.enter-text i {
+    position: absolute;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+}

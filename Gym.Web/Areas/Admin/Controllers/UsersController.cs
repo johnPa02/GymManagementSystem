@@ -13,6 +13,7 @@ namespace Gym.Web.Areas.Admin.Controllers
             _userService = userService;
         }
 
+        [Route("/Admin/UserManagement")]
         public IActionResult Index(int PageNumber=1, int PageSize=10)
         {
             return View(_userService.GetAll(PageNumber, PageSize));

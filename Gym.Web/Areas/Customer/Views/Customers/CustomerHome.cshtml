@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Customer Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header>
+    <div class="navbar-content fixed-top" id="navbar-content" data-scrollto-offset="0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" asp-area="Customer" asp-controller="Customers" asp-action="CustomerHome">
+                    <img src="/img/Logo.png" alt="logo" height="80" loading="lazy" width="80">
+                </a>
+
+                <!-- Nút dành cho mobile trỏ xuống -->
+                <button class="navbar-toggler border-0" id="btn-menu" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Thanh điều hướng -->
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <!-- LEFT -->
+                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Customer" asp-controller="Customers" asp-action="CustomerHome">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Dịch vụ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Lịch tập</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Khuyến mãi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Tập thử miễn phí</a>
+                        </li>
+                    </ul>
+
+                    <!-- RIGHT -->
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item border-end">
+                            <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Đăng nhập</a>
+                        </li>
+                        <li class="nav-item item-dangky">
+                            <a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Đăng ký</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<div class="content-1">
+    <!-- Slider giới thiệu -->
+    <div id="slider">
+        <div id="banner" class="d-flex align-items-center justify-content-center">
+            <div class="container">
+                <div class="row">
+                    <div class="row">
+                        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pb-4 pt-lg-0 order-2 order-lg-1">
+                            <h1>Khám phá cơ thể mơ ước của bạn</h1>
+                            <h2>Bắt đầu tìm kiếm với chúng tôi!</h2>
+                            <div class="d-flex justify-content-center justify-content-lg-start">
+                                <a href="#content-3"
+                                   class="btn-start form-control-plaintext nav-link border-0 text-center"
+                                   style="width: 180px; padding: 15px 0;">Bắt đầu ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -2,77 +2,79 @@
 @model PagedResult<Gym.ViewModels.ApplicationUserViewModel>
 @{
     ViewData["Title"] = "Index";
+    Layout = "~/Views/Home/Index.cshtml";
 }
 
-<h1>Index</h1>
-@using (Html.BeginForm("Search", "Users", FormMethod.Get))
-{
-    <div class="form-group">
-        <input type="text" name="searchTerm" class="form-control" placeholder="Tìm kiếm..." />
-    </div>
-    <button type="submit" class="btn btn-primary">Tìm Kiếm</button>
-}
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Role
-            </th>
-            <th>
-                UserName
-            </th>
-            <th>
-                FullName
-            </th>
-            <th>
-                DateOfBirth
-            </th>
-            <th>
-                PhoneNumber
-            </th>
-            <th>
-                IsActive
-            </th>
-            <th>
-                Specialization
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Data) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Role)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FullName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateOfBirth)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PhoneNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsActive)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Specialization)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <h1>Index</h1>
+    @using (Html.BeginForm("Search", "Users", FormMethod.Get))
+    {
+        <div class="form-group">
+            <input type="text" name="searchTerm" class="form-control" placeholder="Tìm kiếm..." />
+        </div>
+        <button type="submit" class="btn btn-primary">Tìm Kiếm</button>
+    }
+
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Role
+                </th>
+                <th>
+                    UserName
+                </th>
+                <th>
+                    FullName
+                </th>
+                <th>
+                    DateOfBirth
+                </th>
+                <th>
+                    PhoneNumber
+                </th>
+                <th>
+                    IsActive
+                </th>
+                <th>
+                    Specialization
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model.Data) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Role)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateOfBirth)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsActive)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Specialization)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>

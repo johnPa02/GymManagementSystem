@@ -12,3 +12,17 @@ C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Models\obj\Debug\net6.0\refint\Gy
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Models\obj\Debug\net6.0\Gym.Models.pdb
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Models\obj\Debug\net6.0\Gym.Models.genruntimeconfig.cache
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Models\obj\Debug\net6.0\ref\Gym.Models.dll
+D:\Workplace\TDTU\.NET\Final\GymManagementSystem\Gym.Models\bin\Debug\net6.0\Gym.Models.deps.json
+D:\Workplace\TDTU\.NET\Final\GymManagementSystem\Gym.Models\bin\Debug\net6.0\Gym.Models.runtimeconfig.json
+D:\Workplace\TDTU\.NET\Final\GymManagementSystem\Gym.Models\bin\Debug\net6.0\Gym.Models.dll
+D:\Workplace\TDTU\.NET\Final\GymManagementSystem\Gym.Models\bin\Debug\net6.0\Gym.Models.pdb
+D:\Workplace\TDTU\.NET\Final\GymManagementSystem\Gym.Models\obj\Debug\net6.0\Gym.Models.csproj.AssemblyReference.cache
+D:\Workplace\TDTU\.NET\Final\GymManagementSystem\Gym.Models\obj\Debug\net6.0\Gym.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Workplace\TDTU\.NET\Final\GymManagementSystem\Gym.Models\obj\Debug\net6.0\Gym.Models.AssemblyInfoInputs.cache
+D:\Workplace\TDTU\.NET\Final\GymManagementSystem\Gym.Models\obj\Debug\net6.0\Gym.Models.AssemblyInfo.cs
+D:\Workplace\TDTU\.NET\Final\GymManagementSystem\Gym.Models\obj\Debug\net6.0\Gym.Models.csproj.CoreCompileInputs.cache
+D:\Workplace\TDTU\.NET\Final\GymManagementSystem\Gym.Models\obj\Debug\net6.0\Gym.Models.dll
+D:\Workplace\TDTU\.NET\Final\GymManagementSystem\Gym.Models\obj\Debug\net6.0\refint\Gym.Models.dll
+D:\Workplace\TDTU\.NET\Final\GymManagementSystem\Gym.Models\obj\Debug\net6.0\Gym.Models.pdb
+D:\Workplace\TDTU\.NET\Final\GymManagementSystem\Gym.Models\obj\Debug\net6.0\Gym.Models.genruntimeconfig.cache
+D:\Workplace\TDTU\.NET\Final\GymManagementSystem\Gym.Models\obj\Debug\net6.0\ref\Gym.Models.dll

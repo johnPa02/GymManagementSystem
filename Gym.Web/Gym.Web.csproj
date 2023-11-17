@@ -28,6 +28,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="Areas\Trainer\" />
 	  <Folder Include="Areas\Receptionist\Controllers\" />
 	  <Folder Include="Areas\Receptionist\Views\" />
 	  <Folder Include="Areas\Trainer\Controllers\" />
