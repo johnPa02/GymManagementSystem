@@ -1,11 +1,14 @@
-﻿using Gym.Services;
+﻿using System.Data;
+using Gym.Services;
 using Gym.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Gym.Web.Areas.Admin.Controllers
 {
-	[Area("admin")]
-	public class PackagesController : Controller
+	[Area("Admin")]
+    [Authorize(Roles = "Admin")]
+    public class PackagesController : Controller
 	{
 		private IPackageService _package;
 		public PackagesController(IPackageService package)

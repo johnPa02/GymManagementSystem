@@ -1,9 +1,12 @@
-﻿using Gym.Services;
+﻿using System.Data;
+using Gym.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Gym.Web.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class UsersController : Controller
     {
         private IApplicationUserService _userService;

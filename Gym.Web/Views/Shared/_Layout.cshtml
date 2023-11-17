@@ -19,31 +19,41 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+                        
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="admin" asp-controller="Packages" asp-action="Index">Package</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="manage" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/TrainerRegister">Trainer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="admin" asp-controller="Users" asp-action="Index">Users</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="admin" asp-controller="Users" asp-action="AllTrainers">Trainer List</a>
+                            </li>
+                        }
+                        else
+                        {
+                            
+                        }
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="admin" asp-controller="Packages" asp-action="Index">Package</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="manage" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/TrainerRegister">Trainer</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="admin" asp-controller="Users" asp-action="Index">Users</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="admin" asp-controller="Users" asp-action="AllTrainers">Trainer List</a>
-                        </li>
-                        <li class="nav-item">
-                            <partial name="_LoginPartial"/>
+                            <partial name="_LoginPartial" />
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+
+        
     </header>
     <div class="container">
         <main role="main" class="pb-3">
