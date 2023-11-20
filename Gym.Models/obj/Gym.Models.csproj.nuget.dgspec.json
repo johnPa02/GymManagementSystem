@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Models\\Gym.Models.csproj": {}
+    "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Models\\Gym.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Models\\Gym.Models.csproj": {
+    "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Models\\Gym.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Models\\Gym.Models.csproj",
+        "projectUniqueName": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Models\\Gym.Models.csproj",
         "projectName": "Gym.Models",
-        "projectPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Models\\Gym.Models.csproj",
-        "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Models\\obj\\",
+        "projectPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Models\\Gym.Models.csproj",
+        "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
+        "outputPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -75,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

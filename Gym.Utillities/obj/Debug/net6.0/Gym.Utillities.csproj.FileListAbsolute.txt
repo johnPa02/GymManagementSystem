@@ -17,3 +17,22 @@ C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Utillities\obj\Debug\net6.0\refin
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Utillities\obj\Debug\net6.0\Gym.Utillities.pdb
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Utillities\obj\Debug\net6.0\Gym.Utillities.genruntimeconfig.cache
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.Utillities\obj\Debug\net6.0\ref\Gym.Utillities.dll
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.Utillities\bin\Debug\net6.0\Gym.Utillities.deps.json
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.Utillities\bin\Debug\net6.0\Gym.Utillities.runtimeconfig.json
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.Utillities\bin\Debug\net6.0\Gym.Utillities.dll
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.Utillities\bin\Debug\net6.0\Gym.Utillities.pdb
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.Utillities\bin\Debug\net6.0\Gym.Models.dll
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.Utillities\bin\Debug\net6.0\Gym.Repositories.dll
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.Utillities\bin\Debug\net6.0\Gym.Models.pdb
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.Utillities\bin\Debug\net6.0\Gym.Repositories.pdb
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.Utillities\obj\Debug\net6.0\Gym.Utillities.csproj.AssemblyReference.cache
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.Utillities\obj\Debug\net6.0\Gym.Utillities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.Utillities\obj\Debug\net6.0\Gym.Utillities.AssemblyInfoInputs.cache
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.Utillities\obj\Debug\net6.0\Gym.Utillities.AssemblyInfo.cs
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.Utillities\obj\Debug\net6.0\Gym.Utillities.csproj.CoreCompileInputs.cache
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.Utillities\obj\Debug\net6.0\Gym.Utillities.csproj.CopyComplete
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.Utillities\obj\Debug\net6.0\Gym.Utillities.dll
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.Utillities\obj\Debug\net6.0\refint\Gym.Utillities.dll
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.Utillities\obj\Debug\net6.0\Gym.Utillities.pdb
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.Utillities\obj\Debug\net6.0\Gym.Utillities.genruntimeconfig.cache
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.Utillities\obj\Debug\net6.0\ref\Gym.Utillities.dll

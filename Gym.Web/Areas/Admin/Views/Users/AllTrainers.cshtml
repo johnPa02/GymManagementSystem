@@ -2,10 +2,88 @@
 @model PagedResult<Gym.ViewModels.ApplicationUserViewModel>
 @{
     ViewData["Title"] = "Trainer List";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
-<h1>Trainers</h1>
+@*Huấn luyện viên Coach*@
+<h4 class="fw-bold my-3"><span class="text-muted fw-light">Quản lý /</span> Huấn Luyện Viên</h4>
 
+<div class="card mb-3">
+    <div class="card-header text-white fs-4 p-3" style="background: #A50000;">
+        Danh Sách Huấn Luyện Viên
+        <a href="#" class="text-white float-end" data-bs-toggle="modal" data-bs-target="#addUserModal">
+            <button type="button" class="btn btn-dark">
+                <span class="">
+                    Thêm HLV Mới
+                </span>
+            </button>
+        </a>
+    </div>
+
+    <div class="card-body  mt-3">
+        <div class="row">
+            <div class="col-md-3">
+                <input type="text" placeholder="Nhập id hoặc tên HLV" class="form-control">
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-dark btn-block">Tìm kiếm</button>
+            </div>
+        </div>
+
+        <div class="table-responsive mt-3">
+            <table class="table table-bordered" id="" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Vai trò</th>
+                        <th>Họ tên</th>
+                        <th>Ngày sinh</th>
+                        <th>Số điện thoại</th>
+                        <th>Trạng thái</th>
+                        <th>Chuyên môn</th>
+                        <th>Lựa chọn</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Data)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Role)
+                            </td>
+                            <td>
+                                <a href="@Url.Action("Details", new { /* id=item.PrimaryKey */ })">
+                                    @Html.DisplayFor(modelItem => item.FullName)
+                                </a>
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FormattedDateOfBirth)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PhoneNumber)
+                            </td>
+                            <td class="text-center">
+                                @Html.DisplayFor(modelItem => item.IsActive)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Specialization)
+                            </td>
+                            <td>
+                                <a href="@Url.Action("Edit", new { /* id=item.PrimaryKey */ })" class="btn btn-warning">
+                                    <i class="fas fa-edit"></i>
+                                </a> |
+                                <a href="@Url.Action("Delete", new { /* id=item.PrimaryKey */ })" class="btn btn-danger">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@*
 <p>
     <a asp-action="Create">Create New</a>
 </p>
@@ -63,3 +141,4 @@
 }
     </tbody>
 </table>
+*@

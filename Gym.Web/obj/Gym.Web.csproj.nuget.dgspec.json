@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Web\\Gym.Web.csproj": {}
+    "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Web\\Gym.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Models\\Gym.Models.csproj": {
+    "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Models\\Gym.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Models\\Gym.Models.csproj",
+        "projectUniqueName": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Models\\Gym.Models.csproj",
         "projectName": "Gym.Models",
-        "projectPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Models\\Gym.Models.csproj",
-        "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Models\\obj\\",
+        "projectPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Models\\Gym.Models.csproj",
+        "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
+        "outputPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -75,21 +75,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Repositories\\Gym.Repositories.csproj": {
+    "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Repositories\\Gym.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Repositories\\Gym.Repositories.csproj",
+        "projectUniqueName": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Repositories\\Gym.Repositories.csproj",
         "projectName": "Gym.Repositories",
-        "projectPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Repositories\\Gym.Repositories.csproj",
-        "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Repositories\\obj\\",
+        "projectPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Repositories\\Gym.Repositories.csproj",
+        "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
+        "outputPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -103,8 +103,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Models\\Gym.Models.csproj": {
-                "projectPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Models\\Gym.Models.csproj"
+              "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Models\\Gym.Models.csproj": {
+                "projectPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Models\\Gym.Models.csproj"
               }
             }
           }
@@ -160,21 +160,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Services\\Gym.Services.csproj": {
+    "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Services\\Gym.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Services\\Gym.Services.csproj",
+        "projectUniqueName": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Services\\Gym.Services.csproj",
         "projectName": "Gym.Services",
-        "projectPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Services\\Gym.Services.csproj",
-        "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Services\\obj\\",
+        "projectPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Services\\Gym.Services.csproj",
+        "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
+        "outputPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -188,11 +188,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Utillities\\Gym.Utillities.csproj": {
-                "projectPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Utillities\\Gym.Utillities.csproj"
+              "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Utillities\\Gym.Utillities.csproj": {
+                "projectPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Utillities\\Gym.Utillities.csproj"
               },
-              "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.ViewModels\\Gym.ViewModels.csproj": {
-                "projectPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.ViewModels\\Gym.ViewModels.csproj"
+              "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.ViewModels\\Gym.ViewModels.csproj": {
+                "projectPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.ViewModels\\Gym.ViewModels.csproj"
               }
             }
           }
@@ -238,21 +238,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Utillities\\Gym.Utillities.csproj": {
+    "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Utillities\\Gym.Utillities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Utillities\\Gym.Utillities.csproj",
+        "projectUniqueName": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Utillities\\Gym.Utillities.csproj",
         "projectName": "Gym.Utillities",
-        "projectPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Utillities\\Gym.Utillities.csproj",
-        "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Utillities\\obj\\",
+        "projectPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Utillities\\Gym.Utillities.csproj",
+        "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
+        "outputPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Utillities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -266,11 +266,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Models\\Gym.Models.csproj": {
-                "projectPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Models\\Gym.Models.csproj"
+              "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Models\\Gym.Models.csproj": {
+                "projectPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Models\\Gym.Models.csproj"
               },
-              "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Repositories\\Gym.Repositories.csproj": {
-                "projectPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Repositories\\Gym.Repositories.csproj"
+              "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Repositories\\Gym.Repositories.csproj": {
+                "projectPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Repositories\\Gym.Repositories.csproj"
               }
             }
           }
@@ -320,21 +320,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.ViewModels\\Gym.ViewModels.csproj": {
+    "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.ViewModels\\Gym.ViewModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.ViewModels\\Gym.ViewModels.csproj",
+        "projectUniqueName": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.ViewModels\\Gym.ViewModels.csproj",
         "projectName": "Gym.ViewModels",
-        "projectPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.ViewModels\\Gym.ViewModels.csproj",
-        "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.ViewModels\\obj\\",
+        "projectPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.ViewModels\\Gym.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
+        "outputPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.ViewModels\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -348,8 +348,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Models\\Gym.Models.csproj": {
-                "projectPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Models\\Gym.Models.csproj"
+              "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Models\\Gym.Models.csproj": {
+                "projectPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Models\\Gym.Models.csproj"
               }
             }
           }
@@ -395,21 +395,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Web\\Gym.Web.csproj": {
+    "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Web\\Gym.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Web\\Gym.Web.csproj",
+        "projectUniqueName": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Web\\Gym.Web.csproj",
         "projectName": "Gym.Web",
-        "projectPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Web\\Gym.Web.csproj",
-        "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Web\\obj\\",
+        "projectPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Web\\Gym.Web.csproj",
+        "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
+        "outputPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -423,14 +423,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Repositories\\Gym.Repositories.csproj": {
-                "projectPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Repositories\\Gym.Repositories.csproj"
+              "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Repositories\\Gym.Repositories.csproj": {
+                "projectPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Repositories\\Gym.Repositories.csproj"
               },
-              "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Services\\Gym.Services.csproj": {
-                "projectPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Services\\Gym.Services.csproj"
+              "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Services\\Gym.Services.csproj": {
+                "projectPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Services\\Gym.Services.csproj"
               },
-              "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Utillities\\Gym.Utillities.csproj": {
-                "projectPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Utillities\\Gym.Utillities.csproj"
+              "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Utillities\\Gym.Utillities.csproj": {
+                "projectPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Utillities\\Gym.Utillities.csproj"
               }
             }
           }
@@ -497,7 +497,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

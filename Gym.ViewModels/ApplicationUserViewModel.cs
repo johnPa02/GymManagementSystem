@@ -15,7 +15,7 @@ namespace Gym.ViewModels
 
         public string Email { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public string FormattedDateOfBirth => DateOfBirth.ToString("MM/dd/yyyy");
+        public string FormattedDateOfBirth => DateOfBirth.ToString("dd/MM/yyyy");
         public string PhoneNumber { get; set; }
         public bool IsActive { get; set; }
         public string Specialization { get; set; }

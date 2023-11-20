@@ -1,0 +1,98 @@
+﻿@using Gym.Utillities;
+
+@* Sửa cái này thành ServiceViewModel *@
+@model PagedResult<Gym.ViewModels.PackageViewModel>
+
+
+@{
+    ViewData["Title"] = "Dịch vụ";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+@* Gói tập *@
+<h4 class="fw-bold my-3"><span class="text-muted fw-light">Quản lý /</span> Dịch Vụ</h4>
+
+<div class="card mb-3">
+    <div class="card-header text-white fs-4 p-3" style="background: #A50000;">
+        Danh Sách Dịch Vụ
+        <a asp-action="Create" class="text-white float-end">
+            <button type="button" class="btn btn-dark">
+                <span class="">
+                    Thêm Dịch Vụ Mới
+                </span>
+            </button>
+        </a>
+    </div>
+
+    <div class="card-body  mt-3">
+        <div class="row">
+            <div class="col-md-3">
+                <input type="text" placeholder="Nhập id hoặc tên dịch vụ" class="form-control">
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-dark btn-block">Tìm kiếm</button>
+            </div>
+        </div>
+
+        <div class="table-responsive mt-3">
+            <table class="table table-bordered" id="" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Tên dịch vụ</th>
+                        <th>Mô tả</th>
+                        <th>Giá</th>
+                        <th>Loại dịch vụ</th>
+                        <th>Lựa chọn</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @*Sửa cái này thành data của Services
+                    @foreach (var item in Model.Data)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PackageId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PackageName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Price)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                            <td>
+                                <a href="@Url.Action("Edit", new { /* id=item.PrimaryKey */ })" class="btn btn-warning">
+                                    <i class="fas fa-edit"></i>
+                                </a> |
+                                <a href="@Url.Action("Delete", new { /* id=item.PrimaryKey */ })" class="btn btn-danger">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                    *@
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@*
+<cs-pager cs-paging-pagesize=(int)Model.PageSize
+          cs-paging-pagenumber=(int)Model.PageNumber
+          cs-paging-totalitems=(int)Model.TotalItems
+          cs-paging-param="pageNumber"
+          asp-Controller="Packages"
+          asp-action="Index"
+          cs-pager-li-current-class="page-item active"
+          cs-pager-li-other-class="page-item"
+          cs-pager-li-non-active-class="page-item disable"
+          cs-pager-link-current-class="page-link"
+          cs-pager-link-other-class="page-link"></cs-pager>
+*@

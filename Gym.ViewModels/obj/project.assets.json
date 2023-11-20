@@ -3276,19 +3276,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Windows\\.nuget\\packages\\": {}
+    "C:\\Users\\asus\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.ViewModels\\Gym.ViewModels.csproj",
+      "projectUniqueName": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.ViewModels\\Gym.ViewModels.csproj",
       "projectName": "Gym.ViewModels",
-      "projectPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.ViewModels\\Gym.ViewModels.csproj",
-      "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.ViewModels\\obj\\",
+      "projectPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.ViewModels\\Gym.ViewModels.csproj",
+      "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
+      "outputPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.ViewModels\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3302,8 +3302,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Models\\Gym.Models.csproj": {
-              "projectPath": "C:\\Users\\Windows\\Documents\\Boring\\.NET\\Gym\\Gym.Models\\Gym.Models.csproj"
+            "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Models\\Gym.Models.csproj": {
+              "projectPath": "D:\\Workplace\\TDTU\\.NET\\Final Develop\\GymManagementSystem\\Gym.Models\\Gym.Models.csproj"
             }
           }
         }
@@ -3349,7 +3349,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

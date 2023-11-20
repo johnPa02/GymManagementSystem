@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Gym.Web.Areas.Admin.Controllers
 {
-	[Area("admin")]
+	[Area("Admin")]
 	public class PackagesController : Controller
 	{
 		private IPackageService _package;
@@ -13,10 +13,12 @@ namespace Gym.Web.Areas.Admin.Controllers
 			_package = package;
 		}
 
+		[Route("/Admin/PackageManagement")]
 		public IActionResult Index(int pageNumer=1, int pageSize=10)
 		{
 			return View(_package.GetAll(pageNumer, pageSize));
 		}
+
 		[HttpGet]
 		public IActionResult Edit(int id)
 		{

@@ -15,3 +15,20 @@ C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.ViewModels\obj\Debug\net6.0\refin
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.ViewModels\obj\Debug\net6.0\Gym.ViewModels.pdb
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.ViewModels\obj\Debug\net6.0\Gym.ViewModels.genruntimeconfig.cache
 C:\Users\Windows\Documents\Boring\.NET\Gym\Gym.ViewModels\obj\Debug\net6.0\ref\Gym.ViewModels.dll
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.ViewModels\bin\Debug\net6.0\Gym.ViewModels.deps.json
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.ViewModels\bin\Debug\net6.0\Gym.ViewModels.runtimeconfig.json
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.ViewModels\bin\Debug\net6.0\Gym.ViewModels.dll
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.ViewModels\bin\Debug\net6.0\Gym.ViewModels.pdb
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.ViewModels\bin\Debug\net6.0\Gym.Models.dll
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.ViewModels\bin\Debug\net6.0\Gym.Models.pdb
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.ViewModels\obj\Debug\net6.0\Gym.ViewModels.csproj.AssemblyReference.cache
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.ViewModels\obj\Debug\net6.0\Gym.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.ViewModels\obj\Debug\net6.0\Gym.ViewModels.AssemblyInfoInputs.cache
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.ViewModels\obj\Debug\net6.0\Gym.ViewModels.AssemblyInfo.cs
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.ViewModels\obj\Debug\net6.0\Gym.ViewModels.csproj.CoreCompileInputs.cache
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.ViewModels\obj\Debug\net6.0\Gym.ViewModels.csproj.CopyComplete
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.ViewModels\obj\Debug\net6.0\Gym.ViewModels.dll
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.ViewModels\obj\Debug\net6.0\refint\Gym.ViewModels.dll
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.ViewModels\obj\Debug\net6.0\Gym.ViewModels.pdb
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.ViewModels\obj\Debug\net6.0\Gym.ViewModels.genruntimeconfig.cache
+D:\Workplace\TDTU\.NET\Final Develop\GymManagementSystem\Gym.ViewModels\obj\Debug\net6.0\ref\Gym.ViewModels.dll
