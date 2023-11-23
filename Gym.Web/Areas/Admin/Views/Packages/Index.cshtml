@@ -14,11 +14,7 @@
     <div class="card-header text-white fs-4 p-3" style="background: #A50000;">
         Danh Sách Gói Tập
         <a asp-action="Create" class="text-white float-end">
-            <button type="button" class="btn btn-dark">
-                <span class="">
-                    Thêm Gói Tập Mới
-                </span>
-            </button>
+            Thêm Gói Tập Mới
         </a>
     </div>
 
@@ -68,10 +64,10 @@
                                 @Html.DisplayFor(modelItem => item.IsActive)
                             </td>
                             <td>
-                                <a href="@Url.Action("Edit", new { /* id=item.PrimaryKey */ })" class="btn btn-warning">
+                                <a href="@Url.Action("Edit", new { id=item.PackageId})" class="btn btn-warning">
                                     <i class="fas fa-edit"></i>
                                 </a> |
-                                <a href="@Url.Action("Delete", new { /* id=item.PrimaryKey */ })" class="btn btn-danger">
+                                <a href="@Url.Action("Delete", new { id=item.PackageId })" class="btn btn-danger">
                                     <i class="fas fa-trash-alt"></i>
                                 </a>
                             </td>

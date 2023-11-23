@@ -10,6 +10,8 @@
     <div class="container-fluid">
         <form id="account" method="post" class="mx-auto">
             <h4 class="text-center">Đăng Nhập</h4>
+            <div asp-validation-summary="All" class="text-danger"></div>
+
             <div class="mb-3 mt-5">
                 <label asp-for="Input.Email" class="form-label">Email</label>
                 <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />

@@ -39,9 +39,10 @@ namespace Gym.Utillities
 
 				_userManager.CreateAsync(new ApplicationUser
 				{
-					UserName= "admin",
+					UserName= "admin@gmail.com",
 					Email= "admin@gmail.com",
-				}, "admin@123").GetAwaiter().GetResult();
+                    EmailConfirmed = true
+                }, "Admin@123").GetAwaiter().GetResult();
 				var Appuser = _context.ApplicationUsers.FirstOrDefault(x=>x.Email == "admin@gmail.com");
 				if(Appuser != null)
 				{

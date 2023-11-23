@@ -7,7 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace Gym.Web.Areas.Admin.Controllers
 {
 	[Area("Admin")]
-	public class PackagesController : Controller
+    [Authorize(Roles = "Admin")]
+    public class PackagesController : Controller
 	{
 		private IPackageService _package;
 		public PackagesController(IPackageService package)
