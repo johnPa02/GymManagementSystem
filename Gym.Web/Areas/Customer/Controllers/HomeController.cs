@@ -1,11 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Gym.Web.Areas.Customer.Controllers
 {
 	[Area("Customer")]
 	public class HomeController : Controller
 	{
-		public IActionResult Index()
+        [Route("/")]
+        public IActionResult Index()
 		{
 			return View();
 		}

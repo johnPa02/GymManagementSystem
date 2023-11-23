@@ -15,6 +15,7 @@ namespace Gym.ViewModels
 		public int Duration { get; set; }
 		public string Description { get; set; }
 		public bool IsActive { get; set; }
+
 		public PackageViewModel()
 		{
 
@@ -28,6 +29,7 @@ namespace Gym.ViewModels
 			Description= model.Description;
 			IsActive = model.IsActive;
 		}
+
 		public Package ConvertPackageModel(PackageViewModel model) 
 		{
 			return new Package

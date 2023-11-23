@@ -1,0 +1,156 @@
+﻿@using Gym.Utillities;
+@model PagedResult<Gym.ViewModels.PackageViewModel>
+
+
+@{
+    ViewData["Title"] = "Gói tập";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+@* Gói tập *@
+<h4 class="fw-bold my-3"><span class="text-muted fw-light">Quản lý /</span> Gói tập</h4>
+
+<div class="card mb-3">
+    <div class="card-header text-white fs-4 p-3" style="background: #A50000;">
+        Danh Sách Gói Tập
+        <a asp-action="Create" class="text-white float-end">
+            <button type="button" class="btn btn-dark">
+                <span class="">
+                    Thêm Gói Tập Mới
+                </span>
+            </button>
+        </a>
+    </div>
+
+    <div class="card-body  mt-3">
+        <div class="row">
+            <div class="col-md-3">
+                <input type="text" placeholder="Nhập id hoặc tên gói tập" class="form-control">
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-dark btn-block">Tìm kiếm</button>
+            </div>
+        </div>
+
+        <div class="table-responsive mt-3">
+            <table class="table table-bordered" id="" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Tên gói tập</th>
+                        <th>Giá</th>
+                        <th>Thời gian</th>
+                        <th>Mô tả</th>
+                        <th>Trạng thái</th>
+                        <th>Lựa chọn</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Data)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PackageId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PackageName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Price)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Duration)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.IsActive)
+                            </td>
+                            <td>
+                                <a href="@Url.Action("Edit", new { /* id=item.PrimaryKey */ })" class="btn btn-warning">
+                                    <i class="fas fa-edit"></i>
+                                </a> |
+                                <a href="@Url.Action("Delete", new { /* id=item.PrimaryKey */ })" class="btn btn-danger">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+@*
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Duration
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                IsActive
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Data) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PackageId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PackageName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.PackageId  }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.PackageId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.PackageId })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+*@
+
+<cs-pager cs-paging-pagesize=(int)Model.PageSize
+          cs-paging-pagenumber=(int)Model.PageNumber
+          cs-paging-totalitems=(int)Model.TotalItems
+          cs-paging-param="pageNumber"
+          asp-Controller="Packages"
+
+          asp-action="Index"
+          cs-pager-li-current-class="page-item active"
+          cs-pager-li-other-class="page-item"
+          cs-pager-li-non-active-class="page-item disable"
+          cs-pager-link-current-class="page-link"
+          cs-pager-link-other-class="page-link"></cs-pager>
