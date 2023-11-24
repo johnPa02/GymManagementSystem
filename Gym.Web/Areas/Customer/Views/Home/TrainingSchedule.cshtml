@@ -1,0 +1,85 @@
+﻿@model IEnumerable<Gym.ViewModels.TrainingScheduleViewModel>
+
+@{
+    ViewData["Title"] = "Weekly Training Schedule";
+    var startOfWeek = (DateTime)ViewBag.StartOfWeek;
+    var endOfWeek = (DateTime)ViewBag.EndOfWeek;
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="training-schedule mt-5">
+    <div>
+        <a href="@Url.Action("TrainingSchedule", new { date = startOfWeek.AddDays(-7).ToString("yyyy-MM-dd") })" class="btn btn-primary">Tuần Trước</a>
+        <a href="@Url.Action("TrainingSchedule", new { date = startOfWeek.AddDays(7).ToString("yyyy-MM-dd") })" class="btn btn-primary">Tuần Tiếp Theo</a>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Thứ Hai</th>
+                <th>Thứ Ba</th>
+                <th>Thứ Tư</th>
+                <th>Thứ Năm</th>
+                <th>Thứ Sáu</th>
+                <th>Thứ Bảy</th>
+                <th>Chủ Nhật</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int hour = 0; hour < 24; hour++)
+            {
+                <tr>
+                    @for (int day = 1; day <= 7; day++)
+                    {
+                        var dailySchedule = Model.Where(m => m.StartTime.DayOfWeek == (DayOfWeek)(day % 7) && m.StartTime.Hour == hour);
+                        <td>
+                            @foreach (var item in dailySchedule)
+                            {
+                                <div class="class-block" >
+                                    @*Update lại để hiển thị thông tin cơ bản*@
+                                    <span class="class-time">@item.StartTime.ToString("HH:mm")</span>
+                                    <span class="class-name">@item.Description</span>
+                                    <span class="instructor-name">@item.TrainerId</span>
+                                </div>
+                            }
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+    <style>
+        .training-schedule {
+            padding-top: 70px; 
+        }
+        .training-schedule .table {
+            width: 90%;
+        }
+
+        .training-schedule td {
+            vertical-align: top;
+        }
+
+        .class-block {
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        .class-time {
+            font-weight: bold;
+        }
+
+        .class-name {
+            display: block;
+        }
+
+        .instructor-name {
+            display: block;
+            font-style: italic;
+        }
+    </style>
+
+

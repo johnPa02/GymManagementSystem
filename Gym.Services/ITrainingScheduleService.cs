@@ -11,6 +11,8 @@ namespace Gym.Services
     public interface ITrainingScheduleService
     {
         PagedResult<TrainingScheduleViewModel> GetAll(int pageNumber, int pageSize);
+        IEnumerable<TrainingScheduleViewModel> GetAllSchedules();
+        IEnumerable<TrainingScheduleViewModel> GetSchedulesByWeek(DateTime startOfWeek, DateTime endOfWeek);
         TrainingScheduleViewModel GetScheduleById(int id);
         void UpdateSchedule(TrainingScheduleViewModel schedule);
         void DeleteSchedule(int id);

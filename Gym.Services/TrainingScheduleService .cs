@@ -16,7 +16,25 @@ namespace Gym.Services
         {
             _unitOfWork = unitOfWork;
         }
+        public IEnumerable<TrainingScheduleViewModel> GetSchedulesByWeek(DateTime startOfWeek, DateTime endOfWeek)
+        {
+            var schedules = _unitOfWork.GenericRepository<TrainingSchedule>()
+                .GetAll()
+                .Where(schedule => schedule.StartTime.Date >= startOfWeek.Date && schedule.StartTime.Date <= endOfWeek.Date)
+                .OrderBy(schedule => schedule.StartTime)
+                .ToList();
 
+            return schedules.Select(schedule => new TrainingScheduleViewModel(schedule)).ToList();
+        }
+        public IEnumerable<TrainingScheduleViewModel> GetAllSchedules()
+        {
+            var modelList = _unitOfWork.GenericRepository<TrainingSchedule>()
+                .GetAll()
+                .ToList();
+            var vmList = modelList.Select(schedule => new TrainingScheduleViewModel(schedule)).ToList();
+
+            return vmList;
+        }
         public PagedResult<TrainingScheduleViewModel> GetAll(int pageNumber, int pageSize)
         {
             var totalCount = _unitOfWork.GenericRepository<TrainingSchedule>().GetAll().Count();
