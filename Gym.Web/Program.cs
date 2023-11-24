@@ -8,13 +8,12 @@ using Gym.Services;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Gym.Models;
 
-var builder = WebApplication.CreateBuilder(args);
+DotNetEnv.Env.Load();
 
+var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.
-	GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Environment.GetEnvironmentVariable("DATABASE_CONNECTION_STRING")));
 
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 
