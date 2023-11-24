@@ -11,11 +11,13 @@ namespace Gym.Models
 	{
 		[Key]
 		public int ScheduleId { get; set; }
-		public DateTime StartTime { get; set; }
+        public int TrainerId { get; set; }
+        public DateTime StartTime { get; set; }
 		public DateTime EndTime { get; set; }
 		public string Location { get; set; }
 		public string Description { get; set; }
-
-		public ApplicationUser Trainer { get; set; }
+        public bool IsSpecialClass { get; set; }
+        public string TimeSlot { get; set; } // mô tả khung giờ (ví dụ: "Morning", "Afternoon", "Evening")
+        public ApplicationUser Trainer { get; set; }
 	}
 }

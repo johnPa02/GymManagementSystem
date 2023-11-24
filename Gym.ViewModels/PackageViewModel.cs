@@ -15,12 +15,17 @@ namespace Gym.ViewModels
 		public int Duration { get; set; }
 		public string Description { get; set; }
 		public bool IsActive { get; set; }
+        public string TimeSlot { get; set; }
+        public bool UnlimitedAccess { get; set; }
+        public IEnumerable<string> AvailableTimeSlots { get; set; }
 
-		public PackageViewModel()
+
+        public PackageViewModel()
 		{
+            AvailableTimeSlots = new List<string> { "Morning (8 AM - 4 PM)", "Evening (4 PM - 10 PM)" };
 
-		}
-		public PackageViewModel(Package model)
+        }
+        public PackageViewModel(Package model)
 		{
 			PackageId= model.PackageId;
 			PackageName= model.PackageName;
@@ -28,7 +33,9 @@ namespace Gym.ViewModels
 			Duration= model.Duration;
 			Description= model.Description;
 			IsActive = model.IsActive;
-		}
+			TimeSlot = model.TimeSlot;
+			UnlimitedAccess = model.UnlimitedAccess;
+        }
 
 		public Package ConvertPackageModel(PackageViewModel model) 
 		{
@@ -39,7 +46,9 @@ namespace Gym.ViewModels
 				Price = model.Price,
 				Duration = model.Duration,
 				Description = model.Description,
-				IsActive = model.IsActive
+				IsActive = model.IsActive,
+                TimeSlot = model.TimeSlot,
+				UnlimitedAccess = model.UnlimitedAccess
 			};
 		}
 	}

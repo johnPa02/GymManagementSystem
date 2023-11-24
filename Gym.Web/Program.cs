@@ -32,6 +32,7 @@ builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 builder.Services.AddTransient<IPackageService, PackageService>();
 builder.Services.AddTransient<IApplicationUserService, ApplicationUserService>();
+builder.Services.AddTransient<ITrainingScheduleService, TrainingScheduleService>();
 builder.Services.AddRazorPages();
 
 builder.Services.ConfigureApplicationCookie(options =>
@@ -60,7 +61,7 @@ app.UseAuthorization();
 app.MapRazorPages();
 app.MapControllerRoute(
 	name: "default",
-	pattern: "{Customer}/{controller=Home}/{action=Index}/{id?}");
+	pattern: "{Area=Customer}/{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
 

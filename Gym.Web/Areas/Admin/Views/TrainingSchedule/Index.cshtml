@@ -1,0 +1,79 @@
+﻿@using Gym.Utillities
+@model PagedResult<Gym.ViewModels.TrainingScheduleViewModel>
+
+@{
+    ViewData["Title"] = "Lịch Trình Tập Luyện";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h4 class="fw-bold my-3"><span class="text-muted fw-light">Quản lý /</span> Lịch Tập</h4>
+
+<div class="card mb-3">
+    <div class="card-header text-white fs-4 p-3" style="background: #A50000;">
+        Danh Sách Lịch Tập Luyện
+        <a asp-action="Create" class="text-white float-end">
+            Thêm Lịch Mới
+        </a>
+    </div>
+
+    <div class="card-body mt-3">
+        <div class="row">
+            <div class="col-md-3">
+                <input type="text" placeholder="Nhập id hoặc thông tin lịch trình" class="form-control">
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-dark btn-block">Tìm kiếm</button>
+            </div>
+        </div>
+
+        <div class="table-responsive mt-3">
+            <table class="table table-bordered" id="" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>ID Huấn Luyện Viên</th>
+                        <th>Thời Gian Bắt Đầu</th>
+                        <th>Thời Gian Kết Thúc</th>
+                        <th>Địa Điểm</th>
+                        <th>Mô Tả</th>
+                        <th>Lớp Đặc Biệt</th>
+                        <th>Khung Giờ</th>
+                        <th>Lựa chọn</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Data)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.TrainerId)</td>
+                            <td>@Html.DisplayFor(modelItem => item.StartTime)</td>
+                            <td>@Html.DisplayFor(modelItem => item.EndTime)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Location)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                            <td>@Html.DisplayFor(modelItem => item.IsSpecialClass)</td>
+                            <td>@Html.DisplayFor(modelItem => item.TimeSlot)</td>
+                            <td>
+                                <a href="@Url.Action("Edit", new { id=item.TrainingScheduleId })" class="btn btn-warning">
+                                    <i class="fas fa-edit"></i>
+                                </a> |
+                                <a href="@Url.Action("Delete", new { id=item.TrainingScheduleId })" class="btn btn-danger">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<cs-pager cs-paging-pagesize=(int)Model.PageSize
+          cs-paging-pagenumber=(int)Model.PageNumber
+          cs-paging-totalitems=(int)Model.TotalItems
+          cs-paging-param="pageNumber"
+          asp-Controller="Packages"
+          asp-action="Index"
+          cs-pager-li-current-class="page-item active"
+          cs-pager-li-other-class="page-item"
+          cs-pager-li-non-active-class="page-item disable"
+          cs-pager-link-current-class="page-link"
+          cs-pager-link-other-class="page-link"></cs-pager>

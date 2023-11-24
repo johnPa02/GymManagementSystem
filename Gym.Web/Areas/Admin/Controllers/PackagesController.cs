@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace Gym.Web.Areas.Admin.Controllers
 {
 	[Area("Admin")]
-    [Authorize(Roles = "Admin")]
-    public class PackagesController : Controller
+	[Authorize(Roles = "Admin")]
+	public class PackagesController : Controller
 	{
 		private IPackageService _package;
 		public PackagesController(IPackageService package)
@@ -16,7 +16,7 @@ namespace Gym.Web.Areas.Admin.Controllers
 			_package = package;
 		}
 
-		[Route("/Admin/PackageManagement")]
+		[Route("/Admin/Packages/Management")]
 		public IActionResult Index(int pageNumer=1, int pageSize=10)
 		{
 			return View(_package.GetAll(pageNumer, pageSize));
@@ -35,9 +35,11 @@ namespace Gym.Web.Areas.Admin.Controllers
 			return RedirectToAction("Index");
 		}
 		[HttpGet]
-		public IActionResult Create()
+        public IActionResult Create()
 		{
-			return View();
+			var viewModel = new PackageViewModel();
+
+            return View(viewModel);
 		}
 		[HttpPost]
 		public IActionResult Create(PackageViewModel packageViewModel) 
