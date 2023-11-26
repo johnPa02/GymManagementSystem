@@ -11,6 +11,7 @@ namespace Gym.ViewModels
 {
     public class ApplicationUserViewModel
     {
+        public string Id { get; set; }
         public string FullName { get; set; }
 
         public string Email { get; set; }
@@ -27,6 +28,7 @@ namespace Gym.ViewModels
 
         public ApplicationUserViewModel(ApplicationUser model)
         {
+            Id = model.Id;
             Email = model.Email;
             FullName = model.FullName;
             DateOfBirth = model.DateOfBirth;
@@ -39,6 +41,7 @@ namespace Gym.ViewModels
         {
             return new ApplicationUser
             {
+                Id = this.Id,
                 Email = this.Email,
                 FullName = this.FullName,
                 DateOfBirth = this.DateOfBirth,

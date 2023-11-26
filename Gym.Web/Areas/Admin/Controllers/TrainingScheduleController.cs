@@ -35,8 +35,11 @@ namespace Gym.Web.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                _trainingScheduleService.InsertSchedule(viewModel);
-                return RedirectToAction(nameof(Index));
+                _trainingScheduleService.InsertSchedule(viewModel, ModelState);
+                if (ModelState.IsValid)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
             }
             return View(viewModel);
         }

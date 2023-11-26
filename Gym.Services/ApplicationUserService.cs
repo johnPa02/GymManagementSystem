@@ -62,26 +62,26 @@ namespace Gym.Services
             throw new NotImplementedException();
         }
 
-        public PagedResult<ApplicationUserViewModel> GetAllTrainer(int pageNumber, int pageSize)
+        public PagedResult<ApplicationUserViewModel> GetUsersByRole(int pageNumber, int pageSize,string role)
         {
-            var trainers = new List<ApplicationUser>();
-            var trainerRole = _roleManager.FindByNameAsync("Trainer").GetAwaiter().GetResult();
+            var users = new List<ApplicationUser>();
+            var userRole = _roleManager.FindByNameAsync(role).GetAwaiter().GetResult();
 
-            if (trainerRole != null)
+            if (userRole != null)
             {
-                var userIds = _userManager.GetUsersInRoleAsync(trainerRole.Name).Result.Select(u => u.Id).ToList();
-                trainers = _unitOfWork.GenericRepository<ApplicationUser>().GetAll()
+                var userIds = _userManager.GetUsersInRoleAsync(userRole.Name).Result.Select(u => u.Id).ToList();
+                users = _unitOfWork.GenericRepository<ApplicationUser>().GetAll()
                             .Where(u => userIds.Contains(u.Id)).ToList();
             }
 
-            int totalCount = trainers.Count;
+            int totalCount = users.Count;
             int excludeRecords = (pageSize * pageNumber) - pageSize;
-            var trainerList = trainers.Skip(excludeRecords).Take(pageSize).ToList();
-            var trainerViewModelList = ConvertModelToViewModelList(trainerList);
+            var userList = users.Skip(excludeRecords).Take(pageSize).ToList();
+            var userViewModelList = ConvertModelToViewModelList(userList);
 
             var result = new PagedResult<ApplicationUserViewModel>
             {
-                Data = trainerViewModelList,
+                Data = userViewModelList,
                 TotalItems = totalCount,
                 PageNumber = pageNumber,
                 PageSize = pageSize
@@ -132,6 +132,31 @@ namespace Gym.Services
                 PageNumber = pageNumber,
                 PageSize = pageSize
             };
+        }
+        public void DeleteUser(string userId)
+        {
+            var model = _unitOfWork.GenericRepository<ApplicationUser>().GetById(userId);
+            _unitOfWork.GenericRepository<ApplicationUser>().Delete(model);
+            _unitOfWork.Save();
+        }
+        public ApplicationUserViewModel GetUserById(string id)
+        {
+            var model = _unitOfWork.GenericRepository<ApplicationUser>().GetById(id);
+            var vm = new ApplicationUserViewModel(model);
+            return vm;
+        }
+        public void UpdateUser(ApplicationUserViewModel userViewModel)
+        {
+            var ModelById = _unitOfWork.GenericRepository<ApplicationUser>().GetById(userViewModel.Id);
+            ModelById.PhoneNumber = userViewModel.PhoneNumber;
+            ModelById.FullName = userViewModel.FullName;
+            ModelById.Email = userViewModel.Email;
+            ModelById.IsActive = userViewModel.IsActive;
+            ModelById.DateOfBirth = userViewModel.DateOfBirth;
+            ModelById.Specialization = userViewModel.Specialization;
+
+            _unitOfWork.GenericRepository<ApplicationUser>().Update(ModelById);
+            _unitOfWork.Save();
         }
     }
 }

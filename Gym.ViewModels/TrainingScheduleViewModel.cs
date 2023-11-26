@@ -9,6 +9,7 @@ namespace Gym.ViewModels
     {
         public int TrainingScheduleId { get; set; }
         public int TrainerId { get; set; }
+        public string TrainerName { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
         [Required(ErrorMessage = "Không được để trống vị trí")]

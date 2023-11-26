@@ -2,6 +2,7 @@
 using Gym.Repositories.Interfaces;
 using Gym.Utillities;
 using Gym.ViewModels;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,12 +20,23 @@ namespace Gym.Services
         public IEnumerable<TrainingScheduleViewModel> GetSchedulesByWeek(DateTime startOfWeek, DateTime endOfWeek)
         {
             var schedules = _unitOfWork.GenericRepository<TrainingSchedule>()
-                .GetAll()
-                .Where(schedule => schedule.StartTime.Date >= startOfWeek.Date && schedule.StartTime.Date <= endOfWeek.Date)
-                .OrderBy(schedule => schedule.StartTime)
-                .ToList();
+            .GetAll()
+            .Where(schedule => schedule.StartTime.Date >= startOfWeek.Date && schedule.StartTime.Date <= endOfWeek.Date)
+            .OrderBy(schedule => schedule.StartTime)
+            .ToList();
 
-            return schedules.Select(schedule => new TrainingScheduleViewModel(schedule)).ToList();
+            var trainerIds = schedules.Select(s => s.TrainerId.ToString()).Distinct().ToList();
+            var trainers = _unitOfWork.GenericRepository<ApplicationUser>()
+                .GetAll(user => trainerIds.Contains(user.Id))
+                .ToDictionary(user => user.Id, user => user.FullName);
+
+            var scheduleViewModels = schedules.Select(schedule =>
+                new TrainingScheduleViewModel(schedule)
+                {
+                    TrainerName = trainers.TryGetValue(schedule.TrainerId.ToString(), out var name) ? name : "Unknown"
+                }).ToList();
+
+            return scheduleViewModels;
         }
         public IEnumerable<TrainingScheduleViewModel> GetAllSchedules()
         {
@@ -76,8 +88,15 @@ namespace Gym.Services
             _unitOfWork.Save();
         }
 
-        public void InsertSchedule(TrainingScheduleViewModel viewModel)
+        public void InsertSchedule(TrainingScheduleViewModel viewModel, ModelStateDictionary modelState)
         {
+            var trainerExists = _unitOfWork.GenericRepository<ApplicationUser>().GetById(viewModel.TrainerId.ToString()) != null;
+            if (!trainerExists)
+            {
+                modelState.AddModelError("TrainerId", "Trainer ID is not valid.");
+                return;
+            }
+
             var model = MapViewModelToModel(viewModel, new TrainingSchedule());
             _unitOfWork.GenericRepository<TrainingSchedule>().Add(model);
             _unitOfWork.Save();

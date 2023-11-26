@@ -11,7 +11,7 @@
 <div class="card mb-3">
     <div class="card-header text-white fs-4 p-3" style="background: #A50000;">
         Danh Sách Huấn Luyện Viên
-        <a href="#" class="text-white float-end" data-bs-toggle="modal" data-bs-target="#addUserModal">
+        <a asp-area="Identity" asp-page="/Account/TrainerRegister">
             <button type="button" class="btn btn-dark">
                 <span class="">
                     Thêm HLV Mới
@@ -51,7 +51,7 @@
                                 @Html.DisplayFor(modelItem => item.Role)
                             </td>
                             <td>
-                                <a href="@Url.Action("Details", new { /* id=item.PrimaryKey */ })">
+                                <a href="@Url.Action("Details", new { id=item.Id})">
                                     @Html.DisplayFor(modelItem => item.FullName)
                                 </a>
                             </td>
@@ -68,10 +68,10 @@
                                 @Html.DisplayFor(modelItem => item.Specialization)
                             </td>
                             <td>
-                                <a href="@Url.Action("Edit", new { /* id=item.PrimaryKey */ })" class="btn btn-warning">
+                                <a href="@Url.Action("Edit", new { id=item.Id })" class="btn btn-warning">
                                     <i class="fas fa-edit"></i>
                                 </a> |
-                                <a href="@Url.Action("Delete", new { /* id=item.PrimaryKey */ })" class="btn btn-danger">
+                                <a href="@Url.Action("Delete", new { id=item.Id})" class="btn btn-danger">
                                     <i class="fas fa-trash-alt"></i>
                                 </a>
                             </td>

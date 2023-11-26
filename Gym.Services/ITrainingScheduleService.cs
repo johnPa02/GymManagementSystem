@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Gym.ViewModels;
 using Gym.Utillities;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace Gym.Services
 {
@@ -16,6 +17,6 @@ namespace Gym.Services
         TrainingScheduleViewModel GetScheduleById(int id);
         void UpdateSchedule(TrainingScheduleViewModel schedule);
         void DeleteSchedule(int id);
-        void InsertSchedule(TrainingScheduleViewModel schedule);
+        void InsertSchedule(TrainingScheduleViewModel schedule, ModelStateDictionary modelState);
     }
 }
