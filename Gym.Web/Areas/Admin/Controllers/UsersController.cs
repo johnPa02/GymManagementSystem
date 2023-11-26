@@ -38,10 +38,8 @@ namespace Gym.Web.Areas.Admin.Controllers
         public IActionResult Delete(string id)
         {
             _userService.DeleteUser(id);
-            // Lấy URL của trang hiện tại
             var returnUrl = Request.Headers["Referer"].ToString();
 
-            // Kiểm tra nếu URL không rỗng và hợp lệ, sau đó chuyển hướng tới URL đó
             if (!string.IsNullOrEmpty(returnUrl))
             {
                 return Redirect(returnUrl);
