@@ -58,5 +58,19 @@ namespace Gym.Web.Areas.Admin.Controllers
             _userService.UpdateUser(userViewModel);
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public IActionResult EditTrainer(string id)
+        {
+            var model = _userService.GetUserById(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult EditTrainer(ApplicationUserViewModel userViewModel)
+        {
+            _userService.UpdateUser(userViewModel);
+            return RedirectToAction("AllTrainers");
+        }
     }
 }
