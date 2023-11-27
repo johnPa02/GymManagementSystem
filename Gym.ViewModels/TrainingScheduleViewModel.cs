@@ -22,7 +22,7 @@ namespace Gym.ViewModels
 
         public TrainingScheduleViewModel()
         {
-            AvailableTimeSlots = new List<string> { "Morning (8 AM - 4 PM)", "Evening (4 PM - 10 PM)" };
+            AvailableTimeSlots = new List<string> { "Sáng (8 AM - 11 AM)", "Trưa (2 AM - 5AM)", "Tối (7 PM - 10 PM)" };
         }
 
         public TrainingScheduleViewModel(TrainingSchedule model)

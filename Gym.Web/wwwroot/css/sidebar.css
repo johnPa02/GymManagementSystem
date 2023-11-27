@@ -7,7 +7,6 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
     margin: 0;
 }
 
@@ -19,7 +18,6 @@ h3 {
 a {
     cursor: pointer;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
 }
 
 li {
@@ -118,3 +116,14 @@ a.sidebar-link {
         width: auto;
     }
 }
+
+.sidebar {
+    position: relative;
+}
+
+.sidebar-item:last-child {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+

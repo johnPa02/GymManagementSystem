@@ -1,4 +1,8 @@
-﻿.bg-img {
+﻿body, html {
+    background-color: #A50000;
+}
+
+.bg-img {
     background: #A50000;
     padding: 100px;
 }

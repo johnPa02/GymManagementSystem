@@ -11,7 +11,7 @@
 <div class="card mb-3">
     <div class="card-header text-white fs-4 p-3" style="background: #A50000;">
         Danh Sách Huấn Luyện Viên
-        <a asp-area="Identity" asp-page="/Account/TrainerRegister">
+        <a asp-area="Identity" asp-page="/Account/TrainerRegister" class="text-white float-end">
             <button type="button" class="btn btn-dark">
                 <span class="">
                     Thêm HLV Mới
@@ -68,8 +68,8 @@
                                 @Html.DisplayFor(modelItem => item.Specialization)
                             </td>
                             <td>
-                                <a href="@Url.Action("Edit", new { id=item.Id })" class="btn btn-warning">
-                                    <i class="fas fa-edit"></i>
+                                <a href="@Url.Action("EditTrainer", new { id=item.Id })" class="btn btn-warning">
+                                <i class="fas fa-edit"></i>
                                 </a> |
                                 <a href="@Url.Action("Delete", new { id=item.Id})" class="btn btn-danger">
                                     <i class="fas fa-trash-alt"></i>
