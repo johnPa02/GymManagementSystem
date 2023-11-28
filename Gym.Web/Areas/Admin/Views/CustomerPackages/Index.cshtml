@@ -1,0 +1,60 @@
+﻿@using Gym.Utillities
+@model PagedResult<Gym.ViewModels.CustomerPackageViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Ngày bắt đầu
+            </th>
+            <th>
+                Kết thúc
+            </th>
+            <th>
+                ID Gói tập
+            </th>
+            <th>
+                ID Khách
+            </th>
+            <th>
+                ID đơn
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Data) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PackageId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id}) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id})
+            </td>
+        </tr>
+            <p>
+                <a asp-action="Create">Create New</a>
+            </p>
+}
+    </tbody>
+</table>

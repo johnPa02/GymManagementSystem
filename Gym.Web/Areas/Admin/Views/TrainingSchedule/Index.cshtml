@@ -36,7 +36,6 @@
                         <th>Địa Điểm</th>
                         <th>Mô Tả</th>
                         <th>Lớp Đặc Biệt</th>
-                        <th>Khung Giờ</th>
                         <th>Lựa chọn</th>
                     </tr>
                 </thead>
@@ -50,7 +49,6 @@
                             <td>@Html.DisplayFor(modelItem => item.Location)</td>
                             <td>@Html.DisplayFor(modelItem => item.Description)</td>
                             <td>@Html.DisplayFor(modelItem => item.IsSpecialClass)</td>
-                            <td>@Html.DisplayFor(modelItem => item.TimeSlot)</td>
                             <td>
                                 <a href="@Url.Action("Edit", new { id=item.TrainingScheduleId })" class="btn btn-warning">
                                     <i class="fas fa-edit"></i>

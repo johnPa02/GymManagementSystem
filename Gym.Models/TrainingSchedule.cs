@@ -17,7 +17,6 @@ namespace Gym.Models
 		public string Location { get; set; }
 		public string Description { get; set; }
         public bool IsSpecialClass { get; set; }
-        public string TimeSlot { get; set; } // mô tả khung giờ (ví dụ: "Morning", "Afternoon", "Evening")
         public ApplicationUser Trainer { get; set; }
 	}
 }

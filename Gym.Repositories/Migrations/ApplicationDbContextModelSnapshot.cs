@@ -30,10 +30,8 @@ namespace Gym.Repositories.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CustomerId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("CustomerId1")
+                    b.Property<string>("CustomerId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("EndDate")
@@ -47,7 +45,7 @@ namespace Gym.Repositories.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CustomerId1");
+                    b.HasIndex("CustomerId");
 
                     b.HasIndex("PackageId");
 
@@ -206,10 +204,6 @@ namespace Gym.Repositories.Migrations
 
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("TimeSlot")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("TrainerId")
                         .HasColumnType("int");
@@ -455,7 +449,9 @@ namespace Gym.Repositories.Migrations
                 {
                     b.HasOne("Gym.Models.ApplicationUser", "Customer")
                         .WithMany("CustomerPackages")
-                        .HasForeignKey("CustomerId1");
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Gym.Models.Package", "Package")
                         .WithMany()

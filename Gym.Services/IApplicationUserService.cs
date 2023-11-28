@@ -12,6 +12,7 @@ namespace Gym.Services
     {
         void DeleteUser(string userId);
         ApplicationUserViewModel GetUserById(string userId);
+        Task<ApplicationUserViewModel> GetUserByEmailAsync(string email);
         void UpdateUser(ApplicationUserViewModel user);
         PagedResult<ApplicationUserViewModel> GetAll(int PageNumber, int PageSize);
         PagedResult<ApplicationUserViewModel> GetUsersByRole(int PageNumber, int PageSize, string role);

@@ -158,5 +158,22 @@ namespace Gym.Services
             _unitOfWork.GenericRepository<ApplicationUser>().Update(ModelById);
             _unitOfWork.Save();
         }
+        public async Task<ApplicationUserViewModel> GetUserByEmailAsync(string email)
+        {
+            if (string.IsNullOrEmpty(email))
+            {
+                return null;
+            }
+
+            var user = await _userManager.FindByEmailAsync(email);
+
+            if (user == null)
+            {
+                return null;
+            }
+            var application_user = _unitOfWork.GenericRepository<ApplicationUser>().GetById(user.Id);
+            return new ApplicationUserViewModel(application_user);
+        }
+
     }
 }

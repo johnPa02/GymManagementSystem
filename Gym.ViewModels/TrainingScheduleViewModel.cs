@@ -17,12 +17,9 @@ namespace Gym.ViewModels
         [Required(ErrorMessage = "Không được để trống mô tả")]
         public string Description { get; set; }
         public bool IsSpecialClass { get; set; }
-        public string TimeSlot { get; set; }
-        public IEnumerable<string> AvailableTimeSlots { get; set; }
 
         public TrainingScheduleViewModel()
         {
-            AvailableTimeSlots = new List<string> { "Morning (8 AM - 4 PM)", "Evening (4 PM - 10 PM)" };
         }
 
         public TrainingScheduleViewModel(TrainingSchedule model)
@@ -34,7 +31,6 @@ namespace Gym.ViewModels
             Location = model.Location;
             Description = model.Description;
             IsSpecialClass = model.IsSpecialClass;
-            TimeSlot = model.TimeSlot;
         }
 
         public TrainingSchedule ConvertToModel()
@@ -48,7 +44,6 @@ namespace Gym.ViewModels
                 Location = this.Location,
                 Description = this.Description,
                 IsSpecialClass = this.IsSpecialClass,
-                TimeSlot = this.TimeSlot
             };
         }
     }

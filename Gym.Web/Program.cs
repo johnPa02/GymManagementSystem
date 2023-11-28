@@ -33,6 +33,7 @@ builder.Services.AddScoped<IEmailSender, EmailSender>();
 builder.Services.AddTransient<IPackageService, PackageService>();
 builder.Services.AddTransient<IApplicationUserService, ApplicationUserService>();
 builder.Services.AddTransient<ITrainingScheduleService, TrainingScheduleService>();
+builder.Services.AddScoped<ICustomerPackageService, CustomerPackageService>();
 builder.Services.AddRazorPages();
 
 builder.Services.ConfigureApplicationCookie(options =>

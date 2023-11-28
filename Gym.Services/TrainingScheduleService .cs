@@ -110,7 +110,6 @@ namespace Gym.Services
             model.Location = viewModel.Location;
             model.Description = viewModel.Description;
             model.IsSpecialClass = viewModel.IsSpecialClass;
-            model.TimeSlot = viewModel.TimeSlot.ToString();
             return model;
         }
     }

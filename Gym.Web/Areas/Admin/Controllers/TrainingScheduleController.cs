@@ -33,6 +33,10 @@ namespace Gym.Web.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(TrainingScheduleViewModel viewModel)
         {
+            if (viewModel.StartTime >= viewModel.EndTime)
+            {
+                ModelState.AddModelError("", "Thời gian bắt đầu phải nhỏ hơn kết thúc.");
+            }
             if (ModelState.IsValid)
             {
                 _trainingScheduleService.InsertSchedule(viewModel, ModelState);
