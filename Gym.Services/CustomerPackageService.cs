@@ -7,16 +7,17 @@ using Gym.Models;
 using Gym.Repositories.Interfaces;
 using Gym.Utillities;
 using Gym.ViewModels;
+using Microsoft.AspNetCore.Identity;
 
 namespace Gym.Services
 {
 	public class CustomerPackageService : ICustomerPackageService
 	{
 		private readonly IUnitOfWork _unitOfWork;
-		public CustomerPackageService(IUnitOfWork unitOfWork)
+        public CustomerPackageService(IUnitOfWork unitOfWork)
 		{
 			_unitOfWork = unitOfWork;
-		}
+        }
 		public void DeleteCustomerPackage(int id)
 		{
 			var model = _unitOfWork.GenericRepository<CustomerPackage>().GetById(id);
@@ -63,7 +64,7 @@ namespace Gym.Services
 			var model = new CustomerPackageViewModel().ConvertCustomerPackageModel(customerPackage);
 			_unitOfWork.GenericRepository<CustomerPackage>().Add(model);
 			_unitOfWork.Save();
-		}
+        }
 
 		public void UpdateCustomerPackage(CustomerPackageViewModel customerPackage)
 		{

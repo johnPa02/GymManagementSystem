@@ -2,6 +2,7 @@
 using Gym.Services;
 using Gym.ViewModels;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -61,7 +62,6 @@ namespace Gym.Web.Areas.Admin.Controllers
                     viewModel.CustomerId = user.Id;
 
                     _customerPackageService.InsertCustomerPackage(viewModel);
-
                     return RedirectToAction(nameof(Index));
                 }
                 else

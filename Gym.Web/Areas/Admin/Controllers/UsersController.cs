@@ -32,8 +32,13 @@ namespace Gym.Web.Areas.Admin.Controllers
 
         public IActionResult Search(string searchTerm, int pageNumber = 1, int pageSize = 10)
         {
-            var model = _userService.SearchUsers(searchTerm, pageNumber, pageSize);
+            var model = _userService.SearchUsers(searchTerm, "", pageNumber, pageSize);
             return View("Index",model);
+        }
+        public IActionResult SearchTrainers(string searchTerm, int pageNumber = 1, int pageSize = 10)
+        {
+            var model = _userService.SearchUsers(searchTerm, "Trainer", pageNumber, pageSize);
+            return View("AllTrainers", model);
         }
         public IActionResult Delete(string id)
         {

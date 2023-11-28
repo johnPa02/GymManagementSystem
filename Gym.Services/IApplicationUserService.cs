@@ -19,6 +19,6 @@ namespace Gym.Services
         PagedResult<ApplicationUserViewModel> GetAllCustomer(int PageNumber, int PageSize);
         PagedResult<ApplicationUserViewModel> GetAllReceptionist(int PageNumber, int PageSize);
         PagedResult<ApplicationUserViewModel> SearchTrainer(int PageNumber, int PageSize, string Spicility);
-        PagedResult<ApplicationUserViewModel> SearchUsers(string searchTerm, int pageNumber, int pageSize);
+        PagedResult<ApplicationUserViewModel> SearchUsers(string searchTerm, string role, int pageNumber, int pageSize);
     }
 }

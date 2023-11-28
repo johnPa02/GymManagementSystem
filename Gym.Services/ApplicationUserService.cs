@@ -108,24 +108,28 @@ namespace Gym.Services
 
             return viewModelList;
         }
-        public PagedResult<ApplicationUserViewModel> SearchUsers(string searchTerm, int pageNumber, int pageSize)
+        public PagedResult<ApplicationUserViewModel> SearchUsers(string searchTerm, string role, int pageNumber, int pageSize)
         {
             searchTerm = searchTerm?.ToLower() ?? "";
             var query = _unitOfWork.GenericRepository<ApplicationUser>().GetAll();
+
+            if (!string.IsNullOrEmpty(role))
+            {
+                query = query.Where(u => _userManager.IsInRoleAsync(u, role).Result);
+            }
 
             if (!string.IsNullOrEmpty(searchTerm))
             {
                 query = query.Where(u =>
                     u.UserName != null && u.UserName.ToLower().Contains(searchTerm) ||
                     u.FullName != null && u.FullName.ToLower().Contains(searchTerm) ||
-                    u.Email != null && u.Email.ToLower().Contains(searchTerm)
+                    u.Email != null && u.Email.ToLower().Contains(searchTerm) ||
+                    u.PhoneNumber != null && u.PhoneNumber.Contains(searchTerm)
                 );
             }
 
-
             var totalCount = query.Count();
             var items = query.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
-
             var viewModelList = ConvertModelToViewModelList(items);
 
             return new PagedResult<ApplicationUserViewModel>

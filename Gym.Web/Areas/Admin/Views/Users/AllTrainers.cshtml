@@ -21,14 +21,17 @@
     </div>
 
     <div class="card-body  mt-3">
-        <div class="row">
-            <div class="col-md-3">
-                <input type="text" placeholder="Nhập id hoặc tên HLV" class="form-control">
+        @using (Html.BeginForm("SearchTrainers", "Users", FormMethod.Get))
+            {
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="text" name="searchTerm" placeholder="Nhập id hoặc tên HLV" class="form-control">
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-dark btn-block">Tìm kiếm</button>
+                </div>
             </div>
-            <div class="col-md-2">
-                <button type="button" class="btn btn-dark btn-block">Tìm kiếm</button>
-            </div>
-        </div>
+            }
 
         <div class="table-responsive mt-3">
             <table class="table table-bordered" id="" width="100%" cellspacing="0">
