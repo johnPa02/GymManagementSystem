@@ -10,7 +10,9 @@ namespace Gym.Services
 {
 	public interface ICustomerPackageService
 	{
-		PagedResult<CustomerPackageViewModel> GetAll(int pageNumber, int pageSize);
+		PagedResult<CustomerPackageViewModel> SearchCustomerPackages(string searchTerm, int pageNumber, int pageSize);
+
+        PagedResult<CustomerPackageViewModel> GetAll(int pageNumber, int pageSize);
 		CustomerPackageViewModel GetCustomerPackageById(int id);
 		void UpdateCustomerPackage(CustomerPackageViewModel customerPackage);
 		void DeleteCustomerPackage(int id);

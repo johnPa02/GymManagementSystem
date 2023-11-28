@@ -14,9 +14,11 @@ namespace Gym.Services
 	public class CustomerPackageService : ICustomerPackageService
 	{
 		private readonly IUnitOfWork _unitOfWork;
-        public CustomerPackageService(IUnitOfWork unitOfWork)
+		private readonly IApplicationUserService _applicationUser;
+        public CustomerPackageService(IUnitOfWork unitOfWork, IApplicationUserService applicationUser)
 		{
 			_unitOfWork = unitOfWork;
+			_applicationUser= applicationUser;
         }
 		public void DeleteCustomerPackage(int id)
 		{
@@ -80,5 +82,37 @@ namespace Gym.Services
 		{
 			return packages.Select(x => new CustomerPackageViewModel(x)).ToList();
 		}
-	}
+        public PagedResult<CustomerPackageViewModel> SearchCustomerPackages(string searchTerm, int pageNumber, int pageSize)
+        {
+            searchTerm = searchTerm?.ToLower() ?? "";
+
+			var user = _applicationUser.GetUserByEmailAsync(searchTerm).Result;
+            var query = _unitOfWork.GenericRepository<CustomerPackage>().GetAll();
+			if (user != null)
+			{
+                query = query.Where(u =>
+                    u.CustomerId != null &&u.CustomerId.ToLower().Contains(user.Id)
+                );
+            }
+            else if (!string.IsNullOrEmpty(searchTerm))
+            {
+                query = query.Where(u =>
+                    u.CustomerId != null && u.CustomerId.ToLower().Contains(searchTerm)
+                );
+            }
+
+            var totalCount = query.Count();
+            var items = query.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
+
+            var viewModelList = ConvertModelToViewModelList(items);
+
+            return new PagedResult<CustomerPackageViewModel>
+            {
+                Data = viewModelList,
+                TotalItems = totalCount,
+                PageNumber = pageNumber,
+                PageSize = pageSize
+            };
+        }
+    }
 }

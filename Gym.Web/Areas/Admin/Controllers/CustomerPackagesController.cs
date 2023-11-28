@@ -130,6 +130,12 @@ namespace Gym.Web.Areas.Admin.Controllers
             _customerPackageService.DeleteCustomerPackage(id);
             return RedirectToAction(nameof(Index));
         }
+        [HttpGet]
+        public IActionResult Search(string searchTerm, int pageNumber = 1, int pageSize = 10)
+        {
+            var customerPackages = _customerPackageService.SearchCustomerPackages(searchTerm, pageNumber, pageSize);
+            return View("Index",customerPackages);
+        }
     }
 
 
