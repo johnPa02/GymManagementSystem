@@ -81,5 +81,11 @@ namespace Gym.Services
 			_unitOfWork.GenericRepository<Package>().Add(model);
 			_unitOfWork.Save();
 		}
-	}
+        public List<PackageViewModel> GetAllPackages()
+        {
+            var modelList = _unitOfWork.GenericRepository<Package>().GetAll().ToList();
+            var vmList = ConvertModelToViewModelList(modelList);
+            return vmList;
+        }
+    }
 }

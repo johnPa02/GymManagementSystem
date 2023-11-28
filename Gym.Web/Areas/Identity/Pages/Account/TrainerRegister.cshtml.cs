@@ -102,7 +102,8 @@ namespace Gym.Web.Areas.Identity.Pages.Account
             public string ConfirmPassword { get; set; }
             public string FullName { get; set; }
             public string PhoneNumber { get; set; }
-            public DateTime DateOfBirth { get; set; }
+            [DataType(DataType.Date)]
+            public DateTime DateOfBirth { get; set; } = DateTime.Today;
             public bool IsActive { get; set; }
             [Required]
             [Display(Name = "Specialization")]
@@ -110,19 +111,22 @@ namespace Gym.Web.Areas.Identity.Pages.Account
             public IEnumerable<SelectListItem> SpecializationOptions { get; set; }
         }
 
-
-        public async Task OnGetAsync(string returnUrl = null)
+        private void PopulateSpecializationOptions()
         {
             Input = new InputModel
             {
                 SpecializationOptions = new List<SelectListItem>
                 {
-                    new SelectListItem { Value = "yoga", Text = "Yoga Instructor" },
-                    new SelectListItem { Value = "nutrition", Text = "Nutrition Coach" },
-                    new SelectListItem { Value = "personal", Text = "Personal Trainer" },
-                    new SelectListItem { Value = "dance", Text = "Dance Fitness Instructor" }
+                    new SelectListItem { Value = "Yoga Instructor", Text = "Yoga Instructor" },
+                    new SelectListItem { Value = "Nutrition Coach", Text = "Nutrition Coach" },
+                    new SelectListItem { Value = "Personal Trainer", Text = "Personal Trainer" },
+                    new SelectListItem { Value = "Dance Fitness Instructor", Text = "Dance Fitness Instructor" }
                 }
             };
+        }
+        public async Task OnGetAsync(string returnUrl = null)
+        {
+            PopulateSpecializationOptions();
             ReturnUrl = returnUrl;
             
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
@@ -136,7 +140,6 @@ namespace Gym.Web.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = CreateUser();
-
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
 
@@ -144,6 +147,7 @@ namespace Gym.Web.Areas.Identity.Pages.Account
                 user.PhoneNumber = Input.PhoneNumber;
                 user.DateOfBirth = Input.DateOfBirth;
                 user.IsActive= Input.IsActive;
+                user.Specialization = Input.SelectedSpecialization;
 
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
@@ -151,35 +155,17 @@ namespace Gym.Web.Areas.Identity.Pages.Account
                 {
                     _logger.LogInformation("User created a new account with password.");
                     await _userManager.AddToRoleAsync(user, WebSiteRoles.Website_Trainer);
-                    var userId = await _userManager.GetUserIdAsync(user);
-                    //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                    //code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-                    //var callbackUrl = Url.Page(
-                    //    "/Account/ConfirmEmail",
-                    //    pageHandler: null,
-                    //    values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
-                    //    protocol: Request.Scheme);
+                    
+                    return RedirectToAction("AllTrainers", "Users", new { Area = "Admin" });
 
-                    //await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                    //    $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
-
-                    if (_userManager.Options.SignIn.RequireConfirmedAccount)
-                    {
-                        return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
-                    }
-                    else
-                    {
-                        await _signInManager.SignInAsync(user, isPersistent: false);
-                        return LocalRedirect(returnUrl);
-                    }
                 }
+                PopulateSpecializationOptions();
                 foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
-            }
 
-            // If we got this far, something failed, redisplay form
+            }
             return Page();
         }
 

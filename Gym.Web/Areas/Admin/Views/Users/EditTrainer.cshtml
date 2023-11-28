@@ -1,0 +1,96 @@
+﻿@model Gym.ViewModels.ApplicationUserViewModel
+
+@{
+    ViewData["Title"] = "Chỉnh sửa nhân viên";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h4 class="fw-bold my-3"><span class="text-muted fw-light">Quản lý /</span> <a asp-action="Index" class="text-muted fw-light">Nhân viên</a><span> /</span> Chỉnh sửa nhân viên</h4>
+
+<div class="card mb-3">
+    <div class="card-header text-white fs-4 p-3" style="background: #A50000;">
+        Chỉnh Sửa Người Dùng
+    </div>
+
+    <div class="card-body  mt-3">
+        <div class="row">
+            <form asp-action="EditTrainer">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="FullName" class="control-label">Họ tên:</label>
+                    <input asp-for="FullName" class="form-control" />
+                    <span asp-validation-for="FullName" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <label asp-for="Email" class="control-label">Email:</label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <label asp-for="DateOfBirth" class="control-label">Ngày sinh:</label>
+                    <input asp-for="DateOfBirth" class="form-control" />
+                    <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <label asp-for="PhoneNumber" class="control-label">Số điện thoại:</label>
+                    <input asp-for="PhoneNumber" class="form-control" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <label asp-for="Specialization" class="control-label">Chuyên môn:</label>
+                    <input asp-for="Specialization" class="form-control" readonly  />
+                    <span asp-validation-for="Specialization" class="text-danger"></span>
+                </div>
+                <div class="form-group form-check mt-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="IsActive" /> @Html.DisplayNameFor(model => model.IsActive)
+                    </label>
+                </div>
+                <div class="form-group mt-3">
+                    <input type="submit" value="Lưu" class="btn btn-dark" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@*
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FullName" class="control-label"></label>
+                <input asp-for="FullName" class="form-control" />
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateOfBirth" class="control-label"></label>
+                <input asp-for="DateOfBirth" class="form-control" />
+                <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsActive" /> @Html.DisplayNameFor(model => model.IsActive)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+*@
+

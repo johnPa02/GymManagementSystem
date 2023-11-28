@@ -8,6 +8,8 @@
 
 	<ItemGroup>
 		<PackageReference Include="cloudscribe.Web.Pagination" Version="6.0.0" />
+		<PackageReference Include="DotNetEnv" Version="2.5.0" />
+		<PackageReference Include="MailKit" Version="4.3.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.23" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.12">
 		  <PrivateAssets>all</PrivateAssets>
@@ -32,6 +34,7 @@
 	  <Folder Include="Areas\Receptionist\Views\" />
 	  <Folder Include="Areas\Trainer\Controllers\" />
 	  <Folder Include="Areas\Trainer\Views\" />
+	  <Folder Include="wwwroot\css\admin\" />
 	</ItemGroup>
 
 </Project>

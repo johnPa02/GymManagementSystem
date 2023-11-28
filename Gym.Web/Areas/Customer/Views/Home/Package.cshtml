@@ -1,0 +1,55 @@
+﻿@using Gym.Utillities
+@model PagedResult<Gym.ViewModels.PackageViewModel>
+
+@{
+    ViewData["Title"] = "Package";
+}
+
+<h1>Package</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                PackageName
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Duration
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                UnlimitedAccess
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Data) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PackageName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnlimitedAccess)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

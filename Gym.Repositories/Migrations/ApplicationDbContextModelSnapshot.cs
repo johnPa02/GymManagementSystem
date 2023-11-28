@@ -30,10 +30,8 @@ namespace Gym.Repositories.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CustomerId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("CustomerId1")
+                    b.Property<string>("CustomerId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("EndDate")
@@ -47,7 +45,7 @@ namespace Gym.Repositories.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CustomerId1");
+                    b.HasIndex("CustomerId");
 
                     b.HasIndex("PackageId");
 
@@ -139,6 +137,16 @@ namespace Gym.Repositories.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<bool>("SpecialClassesIncluded")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("TimeSlot")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("UnlimitedAccess")
+                        .HasColumnType("bit");
+
                     b.HasKey("PackageId");
 
                     b.ToTable("Package");
@@ -187,6 +195,9 @@ namespace Gym.Repositories.Migrations
                     b.Property<DateTime>("EndTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("IsSpecialClass")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Location")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -194,12 +205,15 @@ namespace Gym.Repositories.Migrations
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("TrainerId")
+                    b.Property<int>("TrainerId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TrainerId1")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("ScheduleId");
 
-                    b.HasIndex("TrainerId");
+                    b.HasIndex("TrainerId1");
 
                     b.ToTable("TrainingSchedule");
                 });
@@ -435,7 +449,9 @@ namespace Gym.Repositories.Migrations
                 {
                     b.HasOne("Gym.Models.ApplicationUser", "Customer")
                         .WithMany("CustomerPackages")
-                        .HasForeignKey("CustomerId1");
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Gym.Models.Package", "Package")
                         .WithMany()
@@ -480,7 +496,7 @@ namespace Gym.Repositories.Migrations
                 {
                     b.HasOne("Gym.Models.ApplicationUser", "Trainer")
                         .WithMany("TrainingSchedules")
-                        .HasForeignKey("TrainerId");
+                        .HasForeignKey("TrainerId1");
 
                     b.Navigation("Trainer");
                 });

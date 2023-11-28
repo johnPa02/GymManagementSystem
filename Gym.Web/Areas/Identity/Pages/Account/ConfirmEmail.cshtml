@@ -1,8 +1,41 @@
 ﻿@page
 @model ConfirmEmailModel
 @{
-    ViewData["Title"] = "Confirm email";
+    ViewData["Title"] = "Xác Nhận Email";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>@ViewData["Title"]</h1>
-<partial name="_StatusMessage" model="Model.StatusMessage" />
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #A50000;
+    }
+
+    .confirmation-container {
+        text-align: center;
+        background-color: #FFFFFF;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        color: #000000;
+        margin: 50px auto;
+        max-width: 400px;
+    }
+
+    .status-message {
+        margin-top: 20px;
+    }
+</style>
+
+<div class="confirmation-container">
+    <h1>@ViewData["Title"]</h1>
+    <partial name="_StatusMessage" model="Model.StatusMessage" class="status-message" />
+
+    <p>
+        Email của bạn đã được xác nhận thành công. Bạn có thể đăng nhập vào ứng dụng ngay bây giờ.
+    </p>
+</div>

@@ -11,7 +11,9 @@ namespace Gym.Services
 {
 	public interface IPackageService
 	{
-		PagedResult<PackageViewModel> GetAll(int pageNumber, int pageSize);
+		List<PackageViewModel> GetAllPackages();
+
+        PagedResult<PackageViewModel> GetAll(int pageNumber, int pageSize);
 		PackageViewModel GetPackageById(int id);
 		void UpdatePackage(PackageViewModel package);
 		void DeletePackage(int id);

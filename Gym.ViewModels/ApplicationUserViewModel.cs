@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,9 +11,12 @@ namespace Gym.ViewModels
 {
     public class ApplicationUserViewModel
     {
-        public string UserName { get; set; }
+        public string Id { get; set; }
         public string FullName { get; set; }
+
+        public string Email { get; set; }
         public DateTime DateOfBirth { get; set; }
+        public string FormattedDateOfBirth => DateOfBirth.ToString("dd/MM/yyyy");
         public string PhoneNumber { get; set; }
         public bool IsActive { get; set; }
         public string Specialization { get; set; }
@@ -23,7 +28,8 @@ namespace Gym.ViewModels
 
         public ApplicationUserViewModel(ApplicationUser model)
         {
-            UserName = model.UserName;
+            Id = model.Id;
+            Email = model.Email;
             FullName = model.FullName;
             DateOfBirth = model.DateOfBirth;
             PhoneNumber = model.PhoneNumber;
@@ -35,7 +41,8 @@ namespace Gym.ViewModels
         {
             return new ApplicationUser
             {
-                UserName = this.UserName,
+                Id = this.Id,
+                Email = this.Email,
                 FullName = this.FullName,
                 DateOfBirth = this.DateOfBirth,
                 PhoneNumber = this.PhoneNumber,

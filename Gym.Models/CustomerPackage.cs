@@ -15,6 +15,6 @@ namespace Gym.Models
 		public ApplicationUser Customer { get; set; }
 		public Package Package { get; set; }
 		public int PackageId { get; set; }
-		public int CustomerId { get; set; }
+		public string CustomerId { get; set; }
 	}
 }

@@ -14,5 +14,8 @@ namespace Gym.Models
 		public int Duration { get; set; }
 		public string Description { get; set; }
 		public bool IsActive { get; set; }
-	}
+        public string TimeSlot { get; set; } // Khung giờ active của gói tập
+        public bool UnlimitedAccess { get; set; } // Quyền truy cập không giới hạn
+        public bool SpecialClassesIncluded { get; set; }
+    }
 }

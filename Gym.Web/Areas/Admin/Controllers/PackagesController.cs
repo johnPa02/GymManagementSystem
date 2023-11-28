@@ -1,10 +1,13 @@
-﻿using Gym.Services;
+﻿using System.Data;
+using Gym.Services;
 using Gym.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Gym.Web.Areas.Admin.Controllers
 {
-	[Area("admin")]
+	[Area("Admin")]
+	[Authorize(Roles = "Admin")]
 	public class PackagesController : Controller
 	{
 		private IPackageService _package;
@@ -13,10 +16,12 @@ namespace Gym.Web.Areas.Admin.Controllers
 			_package = package;
 		}
 
+		[Route("/Admin/Packages/Management")]
 		public IActionResult Index(int pageNumer=1, int pageSize=10)
 		{
 			return View(_package.GetAll(pageNumer, pageSize));
 		}
+
 		[HttpGet]
 		public IActionResult Edit(int id)
 		{
@@ -30,9 +35,11 @@ namespace Gym.Web.Areas.Admin.Controllers
 			return RedirectToAction("Index");
 		}
 		[HttpGet]
-		public IActionResult Create()
+        public IActionResult Create()
 		{
-			return View();
+			var viewModel = new PackageViewModel();
+
+            return View(viewModel);
 		}
 		[HttpPost]
 		public IActionResult Create(PackageViewModel packageViewModel) 
