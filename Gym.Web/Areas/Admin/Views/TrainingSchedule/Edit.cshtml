@@ -1,11 +1,64 @@
 ﻿@model Gym.ViewModels.TrainingScheduleViewModel
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Chỉnh sửa lịch tập";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
+<h4 class="fw-bold my-3"><span class="text-muted fw-light">Quản lý /</span> <a asp-action="Index" class="text-muted fw-light">Lịch tập</a><span> /</span> Chỉnh sửa lịch tập</h4>
+<div class="card mb-3">
+    <div class="card-header text-white fs-4 p-3" style="background: #A50000;">
+        Chỉnh Sửa Lịch Tập
+    </div>
 
-<h1>Edit</h1>
+    <div class="card-body  mt-3">
+        <div class="row">
+            <form  asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
+                <div class="form-group">
+                    <label asp-for="TrainingScheduleId" class="control-label">ID lịch tập:</label>
+                    <input asp-for="TrainingScheduleId" class="form-control" />
+                    <span asp-validation-for="TrainingScheduleId" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <label asp-for="TrainerId" class="control-label">ID huấn luyện viên:</label>
+                    <input asp-for="TrainerId" class="form-control" />
+                    <span asp-validation-for="TrainerId" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <label asp-for="StartTime" class="control-label">Thời gian bắt đầu:</label>
+                    <input asp-for="StartTime" class="form-control" />
+                    <span asp-validation-for="StartTime" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <label asp-for="EndTime" class="control-label">Thời gian kết thúc:</label>
+                    <input asp-for="EndTime" class="form-control" />
+                    <span asp-validation-for="EndTime" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <label asp-for="Location" class="control-label">Địa chỉ:</label>
+                    <input asp-for="Location" class="form-control" />
+                    <span asp-validation-for="Location" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <label asp-for="Description" class="control-label">Mô tả:</label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group form-check mt-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="IsSpecialClass" /> @Html.DisplayNameFor(model => model.IsSpecialClass)
+                    </label>
+                </div>
+                <div class="form-group mt-3">
+                    <input type="submit" value="Lưu" class="btn btn-dark" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@*
 <h4>TrainingScheduleViewModel</h4>
 <hr />
 <div class="row">
@@ -58,4 +111,4 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
-
+*@

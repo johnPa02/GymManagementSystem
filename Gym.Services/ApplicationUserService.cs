@@ -115,10 +115,13 @@ namespace Gym.Services
 
             if (!string.IsNullOrEmpty(searchTerm))
             {
-                query = query.Where(u => u.UserName.ToLower().Contains(searchTerm) ||
-                                         u.FullName.ToLower().Contains(searchTerm) ||
-                                         u.Email.ToLower().Contains(searchTerm));
+                query = query.Where(u =>
+                    u.UserName != null && u.UserName.ToLower().Contains(searchTerm) ||
+                    u.FullName != null && u.FullName.ToLower().Contains(searchTerm) ||
+                    u.Email != null && u.Email.ToLower().Contains(searchTerm)
+                );
             }
+
 
             var totalCount = query.Count();
             var items = query.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
