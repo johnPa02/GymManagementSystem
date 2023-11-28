@@ -9,10 +9,11 @@ namespace Gym.Web.Areas.Customer.Controllers
 	public class HomeController : Controller
 	{
         private readonly ITrainingScheduleService _trainingScheduleService;
-
-        public HomeController(ITrainingScheduleService trainingScheduleService)
+        private IPackageService _package;
+        public HomeController(ITrainingScheduleService trainingScheduleService, IPackageService packageService)
         {
             _trainingScheduleService = trainingScheduleService;
+            _package = packageService;
         }
 
         [Route("/")]
@@ -32,6 +33,10 @@ namespace Gym.Web.Areas.Customer.Controllers
             ViewBag.EndOfWeek = endOfWeek;
 
             return View(weeklySchedules);
+        }
+        public IActionResult Package(int pageNumer = 1, int pageSize = 10)
+        {
+            return View(_package.GetAll(pageNumer, pageSize));
         }
     }
 }
