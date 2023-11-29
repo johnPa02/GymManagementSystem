@@ -9,7 +9,7 @@ namespace Gym.Models
 	public class Invoice
 	{
 		public int InvoiceId { get; set; }
-		public decimal TotalAmount { get; set; }
+		public int TotalAmount { get; set; }
 		public DateTime Date { get; set; }
 		public string Status { get; set; }
 

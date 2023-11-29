@@ -70,8 +70,8 @@ namespace Gym.Repositories.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("TotalAmount")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<int>("TotalAmount")
+                        .HasColumnType("int");
 
                     b.HasKey("InvoiceId");
 
@@ -88,14 +88,14 @@ namespace Gym.Repositories.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("InvoiceDetailId"));
 
-                    b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<int>("Amount")
+                        .HasColumnType("int");
 
                     b.Property<int>("InvoiceId")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("PricePerUnit")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<int>("PricePerUnit")
+                        .HasColumnType("int");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
@@ -134,8 +134,8 @@ namespace Gym.Repositories.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
 
                     b.Property<bool>("SpecialClassesIncluded")
                         .HasColumnType("bit");
@@ -164,8 +164,8 @@ namespace Gym.Repositories.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
 
                     b.Property<string>("ServiceName")
                         .IsRequired()
@@ -205,15 +205,13 @@ namespace Gym.Repositories.Migrations
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("TrainerId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("TrainerId1")
+                    b.Property<string>("TrainerId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("ScheduleId");
 
-                    b.HasIndex("TrainerId1");
+                    b.HasIndex("TrainerId");
 
                     b.ToTable("TrainingSchedule");
                 });
@@ -496,7 +494,9 @@ namespace Gym.Repositories.Migrations
                 {
                     b.HasOne("Gym.Models.ApplicationUser", "Trainer")
                         .WithMany("TrainingSchedules")
-                        .HasForeignKey("TrainerId1");
+                        .HasForeignKey("TrainerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Trainer");
                 });
