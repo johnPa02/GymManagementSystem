@@ -9,6 +9,15 @@
 	background-color: transparent;
 } */
 
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #A50000;
+  z-index: 1000;
+}
+
 .navbar-content {
     background-color: #A50000;
 }
@@ -230,3 +239,4 @@
     margin-left: 10px;
     margin-right: -8px;
 }
+
