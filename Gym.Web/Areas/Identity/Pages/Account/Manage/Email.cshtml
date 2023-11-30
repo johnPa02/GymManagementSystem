@@ -7,6 +7,7 @@
 
 <div class="row" style="padding-left: 264px">
     <partial name="_StatusMessage" for="StatusMessage" />
+
     <h2 style="text-align: center; margin-bottom: 30px 0px;">EMAIL</h2>
     <div class="col-md-2">
     </div>
@@ -36,6 +37,7 @@
                             <button id="email-verification" type="submit" asp-page-handler="SendVerificationEmail" class="btn btn-link">Send verification email</button>
                         </div>
                     }
+
 
                     <div class="form-floating mb-3">
                         <input asp-for="Input.NewEmail" class="form-control" autocomplete="email" aria-required="true" />
