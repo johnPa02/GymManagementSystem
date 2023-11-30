@@ -5,6 +5,61 @@
     ViewData["Title"] = "Package";
 }
 
+<div class="card m-3 border-0" style="padding-top: 20px;">
+    <h2 style="text-align: center; margin-bottom: 30px 0px;">DỊCH VỤ & GÓI TẬP</h2>
+    <div class="card-body  mt-3">
+        <div class="row">
+            <div class="col-md-3">
+                <input type="text" placeholder="Nhập id hoặc tên gói tập" class="form-control">
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-dark btn-block">Tìm kiếm</button>
+            </div>
+        </div>
+
+        <div class="table-responsive mt-3">
+            <table class="table table-bordered" id="" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Tên gói tập</th>
+                        <th>Giá</th>
+                        <th>Thời gian</th>
+                        <th>Mô tả</th>
+                        <th>Trạng thái</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Data)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PackageId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PackageName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Price)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Duration) tháng
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.IsActive)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@*
 <h1>Package</h1>
 
 <p>
@@ -53,3 +108,4 @@
 }
     </tbody>
 </table>
+*@

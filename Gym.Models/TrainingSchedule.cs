@@ -11,7 +11,7 @@ namespace Gym.Models
     {
         [Key]
         public int ScheduleId { get; set; }
-        public int TrainerId { get; set; }
+        public string TrainerId { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
         public string Location { get; set; }

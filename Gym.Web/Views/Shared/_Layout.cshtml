@@ -24,8 +24,8 @@
 
                         <!-- Nút dành cho mobile trỏ xuống -->
                         <button class="navbar-toggler border-0" id="btn-menu" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                            aria-label="Toggle navigation">
+                                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                                aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
 
@@ -36,42 +36,41 @@
                                 <li class="nav-item">
                                     <a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="Index">Trang chủ</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link">Dịch vụ</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="TrainingSchedule">Lịch tập</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link">Khuyến mãi</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link">Tập thử miễn phí</a>
-                                </li>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="Package">Dịch vụ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="TrainingSchedule">Lịch tập</a>
+                                    </li>
+                                }
                             </ul>
 
                             <!-- RIGHT -->
                             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                            @if (User.Identity.IsAuthenticated)
-                            {
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index">Hello @User.Identity.Name</a>
-                                </li>
-                                <li class="nav-item">
-                                    <form asp-area="Identity" asp-page="/Account/Logout" method="post">
-                                        <button type="submit" class="btn btn-link nav-link">Đăng xuất</button>
-                                    </form>
-                                </li>
-                            }
-                            else
-                            {
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Đăng nhập</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Đăng ký</a>
-                                </li>
-                            }
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index">Hello @User.Identity.Name</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a id="logout" href="#" class="nav-link" onclick="document.getElementById('logoutForm').submit();">
+                                            Đăng xuất
+                                        </a>
+                                        <form id="logoutForm" class="form-inline" style="display: none;" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "Customer" })">
+                                        </form>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Đăng nhập</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Đăng ký</a>
+                                    </li>
+                                }
                             </ul>
                         </div>
                     </div>

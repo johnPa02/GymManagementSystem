@@ -90,7 +90,7 @@ namespace Gym.Services
 
         public void InsertSchedule(TrainingScheduleViewModel viewModel, ModelStateDictionary modelState)
         {
-            var trainerExists = _unitOfWork.GenericRepository<ApplicationUser>().GetById(viewModel.TrainerId.ToString()) != null;
+            var trainerExists = _unitOfWork.GenericRepository<ApplicationUser>().GetById(viewModel.TrainerId) != null;
             if (!trainerExists && !modelState.ContainsKey("TrainerId"))
             {
                 modelState.AddModelError("TrainerId", "Trainer ID is not valid.");

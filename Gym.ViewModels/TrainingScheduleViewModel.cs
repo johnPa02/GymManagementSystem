@@ -8,7 +8,7 @@ namespace Gym.ViewModels
     public class TrainingScheduleViewModel
     {
         public int TrainingScheduleId { get; set; }
-        public int TrainerId { get; set; }
+        public string TrainerId { get; set; }
         public string TrainerName { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }

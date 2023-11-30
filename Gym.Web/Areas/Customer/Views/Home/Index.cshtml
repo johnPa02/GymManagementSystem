@@ -1,28 +1,187 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Index";
 }
 
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .content {
+        flex: 1;
+    }
+
+    footer {
+        background-color: #000;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+    }
+</style>
+
 <div class="content-1">
-        <!-- Slider giới thiệu -->
-        <div id="slider">
-            <div id="banner" class="d-flex align-items-center justify-content-center">
-                <div class="container">
+    <!-- Slider giới thiệu -->
+    <div id="slider">
+        <div id="banner" class="d-flex align-items-center justify-content-center">
+            <div class="container">
+                <div class="row">
                     <div class="row">
-                        <div class="row">
-                            <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pb-4 pt-lg-0 order-2 order-lg-1">
-                                <h1>Khám phá cơ thể mơ ước của bạn</h1>
-                                <h2>Bắt đầu tìm kiếm với chúng tôi!</h2>
-                                <div class="d-flex justify-content-center justify-content-lg-start">
-                                    <a href="#content-3"
-                                       class="btn-start form-control-plaintext nav-link border-0 text-center"
-                                       style="width: 180px; padding: 15px 0;">Bắt đầu ngay</a>
-                                </div>
+                        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pb-4 pt-lg-0 order-2 order-lg-1">
+                            <h1>Khám phá cơ thể mơ ước của bạn</h1>
+                            <h2>Bắt đầu tìm kiếm với chúng tôi!</h2>
+                            <div class="d-flex justify-content-center justify-content-lg-start">
+                                <a href="#content-2"
+                                   class="btn-start form-control-plaintext nav-link border-0 text-center"
+                                   style="width: 180px; padding: 15px 0;">Bắt đầu ngay</a>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
+    </div>
+
+    <div id="content-2" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-3">Dịch Vụ Nổi Bật</h2>
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="/img/service1.png" class="card-img-top" alt="Service 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Giảm Cân</h5>
+                            <p class="card-text">Tập luyện khoa học và nhanh chóng đạt được mục tiêu hình thể với sự hướng dẫn trực tiếp từ HLV.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="/img/service2.png" class="card-img-top" alt="Service 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Thư Giãn Tinh Thần</h5>
+                            <p class="card-text">Thư giãn trong không gian đậm chất thiền, lấy lại năng lượng tích cực với các lớp Yoga từ cơ bản đến nâng cao.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="/img/service3.png" class="card-img-top" alt="Service 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Nâng Cao Thể Lực</h5>
+                            <p class="card-text">Nâng cao thể lực, tăng cường khả năng tự vệ và sự linh hoạt của cơ thể giúp có một thân hình cân đối.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <img src="/img/service4.png" class="card-img-top" alt="Service 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Kết Nối Bạn Bè</h5>
+                            <p class="card-text">Các lớp tập luyện theo nhóm sẽ giúp bạn kết nối cùng bạn bè, tập luyện sôi động.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content-3" class="py-5" style="background-color: #A50000">
+        <div class="container text-center text-white">
+            <h2 class="mb-4">Hãy bắt đầu hành trình của bạn ngay hôm nay!</h2>
+            <p class="mb-4">Đăng ký ngay để trải nghiệm những dịch vụ tốt nhất từ chúng tôi.</p>
+            <a asp-area="Identity" asp-page="/Account/Register" class="btn btn-dark w-50 p-2 mt-2">Đăng Ký Tập Ngay</a>
+        </div>
+    </div>
+    <div id="content-4" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-3">Xem Các Chi Nhánh</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <select id="citySelect" class="form-select mb-3" aria-label="Chọn Thành Phố">
+                        <option value="hcm">TP.HCM</option>
+                        <option value="hanoi">Hà Nội</option>
+                        <option value="danang">Đà Nẵng</option>
+                    </select>
+                    <p class="mb-4">Chọn thành phố của bạn để xem thông tin chi tiết và bản đồ.</p>
+                    <div id="location-info" class="mt-4">
+                        <div id="hcm-info" class="location-info" style="display: none;">
+                            <h3>Gym Long Toàn Quận 1</h3>
+                            <p>
+                                Tọa lạc trên tầng 6,7,8 thuộc trung tâm thương mại Saigon Center, Câu lạc bộ California Centuryon Saigon Center có tổng diện tích 2.200m2 , được phân chia thành các khu vực tập luyện chuyên biệt cùng hệ thống những thiết bị hiện đại nhất thế giới, đáp ứng mọi nhu cầu tập luyện khắt khe của giới thượng lưu Sài Gòn.
+                            </p>
+                            <p>
+                                <strong>ĐỊA ĐIỂM:</strong> Saigon Center, Lầu 6, 65 Lê Lợi, Phường Bến Nghé, Quận 1, Tp. Hồ Chí Minh.
+                            </p>
+                        </div>
+                        <div id="hanoi-info" class="location-info" style="display: none;">
+                            <h3>Long Toàn Gym Quận Hà Đông</h3>
+                            <p>
+                                Là một trong những trung tâm thể hình mới nhất của chuỗi câu lạc bộ thể hình hàng đầu California Fitness & Yoga tại khu vực đắc địa, sầm uất của tòa nhà MAC Plaza, trung tâm sở hữu những trang thiết bị tập luyện mới nhất, tiên tiến nhất. Cùng hàng trăm lớp học thể dục theo nhóm GroupX - Yoga mỗi tuần, đây sẽ là sự lựa chọn cho lối sống năng động - khỏe mạnh và tận hưởng cuộc sống của hàng ngàn hội viên tại Hà Nội.
+                            </p>
+                            <p>
+                                <strong>ĐỊA ĐIỂM:</strong> MAC Plaza, Tầng 5-6, 10 Trần Phú, P.Mộ Lao, Quận Hà Đông, Hà Nội
+                            </p>
+                        </div>
+                        <div id="danang-info" class="location-info" style="display: none;">
+                            <h3>Long Toàn Gym Đà Nẵng</h3>
+                            <p>
+                                Tận hưởng chuỗi phòng tập gym & yoga với thiết kế tinh tế và dịch vụ hoàn hảo bậc nhất ở ngay trung tâm Đà Nẵng. Hãy đến CLB California Fitness & Yoga Center Đà Nẵng để bắt đầu tập luyện và thay đổi cuộc sống ngay hôm nay.
+                            </p>
+                            <p>
+                                <strong>ĐỊA ĐIỂM:</strong> Tòa Nhà Bưu Điện Thành Phố, Tầng 2, 271 Nguyễn Văn Linh, Phường Vĩnh Trung, Quận Thanh Khê, Đà Nẵng
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="col-md-6 mb-4">
+                    <div id="map" style="height: 300px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 w-100" style="bottom: 0; left: 0;">
+        <div class="container">
+            <p>LONG TOÀN GYM</p>
+        </div>
+    </footer>
 </div>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+    var map = L.map('map').setView([10.7769, 106.7009], 12);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    document.getElementById('citySelect').addEventListener('change', function () {
+        var selectedCity = this.value;
+
+        document.querySelectorAll('.location-info').forEach(function (info) {
+            info.style.display = 'none';
+        });
+
+        document.getElementById(selectedCity + '-info').style.display = 'block';
+
+        switch (selectedCity) {
+            case 'hcm':
+                map.setView([10.7769, 106.7009], 12);
+                break;
+            case 'hanoi':
+                map.setView([20.9981, 105.4545], 12);
+                break;
+            case 'danang':
+                map.setView([16.0479, 108.1710], 12);
+                break;
+        }
+    });
+</script>

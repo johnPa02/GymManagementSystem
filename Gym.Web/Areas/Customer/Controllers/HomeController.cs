@@ -38,5 +38,7 @@ namespace Gym.Web.Areas.Customer.Controllers
         {
             return View(_package.GetAll(pageNumer, pageSize));
         }
+
+
     }
 }
