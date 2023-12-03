@@ -97,6 +97,7 @@ namespace Gym.Web.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(CustomerPackageViewModel viewModel)
         {
+            ModelState.Remove("Email");
             if (ModelState.IsValid)
             {
                 var user = _applicationUserService.GetUserById(viewModel.CustomerId);
