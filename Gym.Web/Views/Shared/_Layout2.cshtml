@@ -74,10 +74,13 @@
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" asp-area="Identity" asp-action="Logout">
+                        <a id="logout" href="#" class="sidebar-link" onclick="document.getElementById('logoutForm').submit();">
+
                             <i class="fas fa-sign-out-alt pe-2"></i>
                             Đăng xuất
                         </a>
+                        <form id="logoutForm" class="form-inline" style="display: none;" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "Customer" })">
+                        </form>
                     </li>
                 </ul>
             </div>
