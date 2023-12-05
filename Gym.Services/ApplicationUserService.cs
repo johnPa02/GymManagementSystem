@@ -149,6 +149,10 @@ namespace Gym.Services
         public ApplicationUserViewModel GetUserById(string id)
         {
             var model = _unitOfWork.GenericRepository<ApplicationUser>().GetById(id);
+            if (model == null)
+            {
+                return null;
+            }
             var vm = new ApplicationUserViewModel(model);
             return vm;
         }

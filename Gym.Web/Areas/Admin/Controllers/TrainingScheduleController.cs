@@ -11,10 +11,12 @@ namespace Gym.Web.Areas.Admin.Controllers
     public class TrainingScheduleController : Controller
     {
         private readonly ITrainingScheduleService _trainingScheduleService;
+        private readonly IApplicationUserService _applicationUserService;
 
-        public TrainingScheduleController(ITrainingScheduleService trainingScheduleService)
+        public TrainingScheduleController(ITrainingScheduleService trainingScheduleService, IApplicationUserService applicationUserService)
         {
             _trainingScheduleService = trainingScheduleService;
+            _applicationUserService = applicationUserService;
         }
         [Route("/Admin/TrainingScheduleManagement")]
         public async Task<IActionResult> Index(int pageNumber = 1, int pageSize = 10)
@@ -34,6 +36,11 @@ namespace Gym.Web.Areas.Admin.Controllers
         public async Task<IActionResult> Create(TrainingScheduleViewModel viewModel)
         {
             ModelState.Remove("TrainerName");
+            var trainer = _applicationUserService.GetUserById(viewModel.TrainerId);
+            if (trainer == null)
+            {
+                ModelState.AddModelError("TrainerId", "Trainer ID khong ton tai");
+            }
             if (viewModel.StartTime >= viewModel.EndTime)
             {
                 ModelState.AddModelError("", "Thời gian bắt đầu phải nhỏ hơn kết thúc.");
