@@ -10,8 +10,8 @@
     <h2 style="text-align: center; margin-bottom: 30px 0px;">LỊCH TẬP</h2>
     <div class="row">
         <div class="col-md-9">
-            <a href="@Url.Action("TrainingSchedule", new { date = startOfWeek.AddDays(-7).ToString("dd-MM-yyyy") })" class="btn btn-dark">Tuần Trước</a>
-            <a href="@Url.Action("TrainingSchedule", new { date = startOfWeek.AddDays(7).ToString("dd-MM-yyyy") })" class="btn btn-dark">Tuần Tiếp Theo</a>
+            <a href="@Url.Action("TrainingSchedule", new { date = startOfWeek.AddDays(-7) })" class="btn btn-dark">Tuần Trước</a>
+            <a href="@Url.Action("TrainingSchedule", new { date = startOfWeek.AddDays(7) })" class="btn btn-dark">Tuần Tiếp Theo</a>
         </div>
         <div class="col-md-2">
             <input type="text" class="form-control" style="font-size: 15px;" name="date" value="@ViewBag.StartOfWeek.ToString("dd-MM-yyyy") - @ViewBag.EndOfWeek.ToString("dd-MM-yyyy") " readonly>
